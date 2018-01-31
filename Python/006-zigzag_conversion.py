@@ -31,4 +31,4 @@ class Solution:
                 step = -1
             index += step
 
-        return ''.join(L)
+        return ''.join(L)kj
