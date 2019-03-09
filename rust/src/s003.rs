@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-struct Solution {}
+pub struct Solution;
 
 impl Solution {
     pub fn length_of_longest_substring(s: String) -> i32 {
@@ -12,5 +12,16 @@ impl Solution {
             map.insert(c, j + 1);
         }
         ans as i32
+    }
+}
+
+
+#[cfg(test)]
+mod test {
+    use super::Solution;
+
+    #[test]
+    fn test() {
+        assert_eq!(Solution::length_of_longest_substring("abcdefafefnodworjewf".to_owned()), 6);
     }
 }

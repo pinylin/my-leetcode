@@ -12,7 +12,7 @@ impl Solution {
         let mut l1 = l1.as_ref();
         let mut l2 = l2.as_ref();
         while l1.is_some() || l2.is_some() {
-            let (x, y) = (l1.map(|n|n.val), l2.map(|n|n.val));
+            let (x, y) = (l1.map(|n| n.val), l2.map(|n| n.val));
             let (x, y) = (x.unwrap_or(0), y.unwrap_or(0));
 
             let mut sum = x + y + carry;
@@ -25,8 +25,8 @@ impl Solution {
             ref_head.next = Some(Box::new(ListNode::new(sum)));
             ref_head = ref_head.next.as_mut().unwrap();
 
-            l1 = l1.map(|n|n.next.as_ref()).unwrap_or(None);
-            l2 = l2.map(|n|n.next.as_ref()).unwrap_or(None);
+            l1 = l1.map(|n| n.next.as_ref()).unwrap_or(None);
+            l2 = l2.map(|n| n.next.as_ref()).unwrap_or(None);
         }
 
         if carry > 0 {
@@ -41,8 +41,8 @@ pub struct Solution;
 
 #[cfg(test)]
 mod test {
-    use crate::linkedlist;
     use super::Solution;
+    use crate::linkedlist;
 
     #[test]
     fn test() {
@@ -50,6 +50,9 @@ mod test {
         let l2 = linkedlist![5, 6, 4];
         assert_eq!(Solution::add_two_numbers(l1, l2), linkedlist![7, 0, 8]);
 
-        assert_eq!(Solution::add_two_numbers(linkedlist![5], linkedlist![5]), linkedlist![0, 1]);
+        assert_eq!(
+            Solution::add_two_numbers(linkedlist![5], linkedlist![5]),
+            linkedlist![0, 1]
+        );
     }
 }
