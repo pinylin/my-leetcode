@@ -45,7 +45,7 @@ mod test {
     use crate::linkedlist;
 
     #[test]
-    fn test() {
+    fn it_works() {
         let l1 = linkedlist![2, 4, 3];
         let l2 = linkedlist![5, 6, 4];
         assert_eq!(Solution::add_two_numbers(l1, l2), linkedlist![7, 0, 8]);

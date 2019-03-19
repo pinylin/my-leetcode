@@ -15,13 +15,15 @@ impl Solution {
     }
 }
 
-
 #[cfg(test)]
 mod test {
     use super::Solution;
 
     #[test]
-    fn test() {
-        assert_eq!(Solution::length_of_longest_substring("abcdefafefnodworjewf".to_owned()), 6);
+    fn it_works() {
+        assert_eq!(
+            Solution::length_of_longest_substring("abcdefafefnodworjewf".to_owned()),
+            6
+        );
     }
 }
