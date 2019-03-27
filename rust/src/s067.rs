@@ -12,32 +12,33 @@
  * Testcase Example:  '"11"\n"1"'
  *
  * Given two binary strings, return their sum (also a binary string).
- * 
+ *
  * The input strings are both non-empty and contains only characters 1 or 0.
- * 
+ *
  * Example 1:
- * 
- * 
+ *
+ *
  * Input: a = "11", b = "1"
  * Output: "100"
- * 
+ *
  * Example 2:
- * 
- * 
+ *
+ *
  * Input: a = "1010", b = "1011"
  * Output: "10101"
- * 
+ *
  */
 use std::char::from_digit;
 impl Solution {
     pub fn add_binary(a: String, b: String) -> String {
-        let mut buf = Vec::with_capacity(usize::max(a.len(), b.len())    + 1);
+        let mut buf = Vec::with_capacity(usize::max(a.len(), b.len()) + 1);
         let mut a: Vec<char> = a.chars().collect();
         let mut b: Vec<char> = b.chars().collect();
         let mut carry = 0;
         while !(a.is_empty() && b.is_empty()) {
             let mut sum = a.pop().map_or(0, |ch| ch.to_digit(10).unwrap())
-                + b.pop().map_or(0, |ch| ch.to_digit(10).unwrap()) + carry;
+                + b.pop().map_or(0, |ch| ch.to_digit(10).unwrap())
+                + carry;
             if sum > 1 {
                 sum -= 2;
                 carry = 1;
@@ -92,13 +93,13 @@ mod test {
 #[cfg(test)]
 mod bench {
     extern crate test;
-    use super::Solution;
     use self::test::Bencher;
+    use super::Solution;
     #[bench]
     fn add_binary(b: &mut Bencher) {
         b.iter(|| Solution::add_binary("10".to_owned(), "1".to_owned()))
     }
-    
+
     #[bench]
     fn add_binary_2(b: &mut Bencher) {
         b.iter(|| Solution::add_binary("10".to_owned(), "1".to_owned()))

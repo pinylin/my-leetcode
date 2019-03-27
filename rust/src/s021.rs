@@ -13,13 +13,13 @@
  *
  * Merge two sorted linked lists and return it as a new list. The new list
  * should be made by splicing together the nodes of the first two lists.
- * 
+ *
  * Example:
- * 
+ *
  * Input: 1->2->4, 1->3->4
  * Output: 1->1->2->3->4->4
- * 
- * 
+ *
+ *
  */
 // Definition for singly-linked list.
 // #[derive(PartialEq, Eq, Debug)]
@@ -27,7 +27,7 @@
 //   pub val: i32,
 //   pub next: Option<Box<ListNode>>
 // }
-// 
+//
 // impl ListNode {
 //   #[inline]
 //   fn new(val: i32) -> Self {
@@ -44,12 +44,15 @@ use std::mem;
 
 impl Solution {
     // @Aloxaf 大佬真是厉害，我就不会去想这种操作
-    pub fn merge_two_lists(mut l1: Option<Box<ListNode>>, mut l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+    pub fn merge_two_lists(
+        mut l1: Option<Box<ListNode>>,
+        mut l2: Option<Box<ListNode>>,
+    ) -> Option<Box<ListNode>> {
         let mut dummy = Box::new(ListNode::new(0));
         let mut cur = &mut dummy;
 
         let (l1, l2) = (&mut l1, &mut l2);
-        while let(Some(n1), Some(n2)) = (l1.as_ref(), l2.as_ref()) {
+        while let (Some(n1), Some(n2)) = (l1.as_ref(), l2.as_ref()) {
             let (v1, v2) = (n1.val, n2.val);
             if v1 < v2 {
                 mem::swap(&mut cur.next, l1);
@@ -88,4 +91,3 @@ mod test {
         );
     }
 }
-
