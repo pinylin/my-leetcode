@@ -68,15 +68,13 @@
 //     }
 //   }
 // }
-use crate::TreeNode;
-
 use std::rc::Rc;
 use std::cell::RefCell;
 impl Solution {
     pub fn is_balanced(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
         Solution::balanced_helper(root.as_ref()).is_some()
     }
-
+    
     fn balanced_helper(root: Option<&Rc<RefCell<TreeNode>>>) -> Option<i32> {
         if let Some(node) = root {
             let pair = (Solution::balanced_helper(node.borrow().left.as_ref()), Solution::balanced_helper(node.borrow().right.as_ref()));
@@ -96,17 +94,3 @@ impl Solution {
     }
 }
 
-pub struct Solution;
-
-#[cfg(test)]
-
-mod test{
-    use super::Solution;
-    use crate::btree;
-    #[test]
-    fn it_works() {
-        assert_eq!(Solution::is_balanced(btree![3, 1, 40, -9, null, 5]), true);
-        assert_eq!(Solution::is_balanced(btree![1,2,2,3,3,null,null,4,4]), false);
-        assert_eq!(Solution::is_balanced(btree![]), true);
-    }
-}
