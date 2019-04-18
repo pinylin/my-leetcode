@@ -12,19 +12,21 @@
  * Testcase Example:  '10'
  *
  * Count the number of prime numbers less than a non-negative number, n.
- * 
+ *
  * Example:
- * 
- * 
+ *
+ *
  * Input: 10
  * Output: 4
  * Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.
- * 
- * 
+ *
+ *
  */
 impl Solution {
     pub fn count_primes(n: i32) -> i32 {
-        if n < 3 { return 0 }
+        if n < 3 {
+            return 0;
+        }
         let mut nums = vec![true; n as usize];
         for i in 2..((n as f64).sqrt() as usize) + 1 {
             if nums[i] {
@@ -45,8 +47,6 @@ mod tests {
 
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::count_primes(10), 4
-        );
+        assert_eq!(Solution::count_primes(10), 4);
     }
 }

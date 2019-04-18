@@ -12,14 +12,14 @@
  * Testcase Example:  '[1,2,6,3,4,5,6]\n6'
  *
  * Remove all elements from a linked list of integers that have value val.
- * 
+ *
  * Example:
- * 
- * 
+ *
+ *
  * Input:  1->2->6->3->4->5->6, val = 6
  * Output: 1->2->3->4->5
- * 
- * 
+ *
+ *
  */
 // Definition for singly-linked list.
 // #[derive(PartialEq, Eq, Clone, Debug)]
@@ -27,7 +27,7 @@
 //   pub val: i32,
 //   pub next: Option<Box<ListNode>>
 // }
-// 
+//
 // impl ListNode {
 //   #[inline]
 //   fn new(val: i32) -> Self {
@@ -41,7 +41,7 @@ use crate::ListNode;
 
 impl Solution {
     pub fn remove_elements(head: Option<Box<ListNode>>, val: i32) -> Option<Box<ListNode>> {
-        let dummy = ListNode{val: 0, next: head};
+        let dummy = ListNode { val: 0, next: head };
         let mut prev = Some(Box::new(dummy));
 
         let mut p = &mut prev;
@@ -56,7 +56,7 @@ impl Solution {
             p = &mut cur.next;
         }
         prev.unwrap().next
-        
+
         // let mut dummy = Some(Box::new(ListNode::new(0)));
         // let mut next = dummy.as_mut();
         // while let Some(mut inner) = head {

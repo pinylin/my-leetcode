@@ -11,27 +11,27 @@
  * Total Submissions: 783.8K
  * Testcase Example:  '["MinStack","push","push","push","getMin","pop","top","getMin"]\n[[],[-2],[0],[-3],[],[],[],[]]'
  *
- * 
+ *
  * Design a stack that supports push, pop, top, and retrieving the minimum
  * element in constant time.
- * 
- * 
+ *
+ *
  * push(x) -- Push element x onto stack.
- * 
- * 
+ *
+ *
  * pop() -- Removes the element on top of the stack.
- * 
- * 
+ *
+ *
  * top() -- Get the top element.
- * 
- * 
+ *
+ *
  * getMin() -- Retrieve the minimum element in the stack.
- * 
- * 
- * 
- * 
+ *
+ *
+ *
+ *
  * Example:
- * 
+ *
  * MinStack minStack = new MinStack();
  * minStack.push(-2);
  * minStack.push(0);
@@ -40,22 +40,20 @@
  * minStack.pop();
  * minStack.top();      --> Returns 0.
  * minStack.getMin();   --> Returns -2.
- * 
- * 
+ *
+ *
  */
 struct MinStack {
     stack: Vec<i32>,
     min: i32,
 }
 
-
-/** 
+/**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 #[allow(dead_code)]
 impl MinStack {
-
     /** initialize your data structure here. */
     fn new() -> Self {
         MinStack {
@@ -78,15 +76,15 @@ impl MinStack {
                 if i == self.min {
                     self.min = self.stack.pop().unwrap()
                 }
-            },
-            None => { },
+            }
+            None => {}
         };
     }
-    
+
     fn top(&self) -> i32 {
         *self.stack.last().unwrap()
     }
-    
+
     fn get_min(&self) -> i32 {
         self.min
     }
@@ -100,8 +98,6 @@ impl MinStack {
  * let ret_3: i32 = obj.top();
  * let ret_4: i32 = obj.get_min();
  */
-
-
 
 #[cfg(test)]
 mod test {
