@@ -13,28 +13,28 @@
  *
  * Given a non-negative index k where k ≤ 33, return the k^th index row of the
  * Pascal's triangle.
- * 
+ *
  * Note that the row index starts from 0.
- * 
- * 
+ *
+ *
  * In Pascal's triangle, each number is the sum of the two numbers directly
  * above it.
- * 
+ *
  * Example:
- * 
- * 
+ *
+ *
  * Input: 3
  * Output: [1,3,3,1]
- * 
- * 
+ *
+ *
  * Follow up:
- * 
+ *
  * Could you optimize your algorithm to use only O(k) extra space?
- * 
+ *
  */
 impl Solution {
     pub fn get_row(row_index: i32) -> Vec<i32> {
-        let mut triangle = vec![1;(row_index+1) as usize];
+        let mut triangle = vec![1; (row_index + 1) as usize];
         for i in 1..row_index + 1 {
             let mut prev = 1;
             for j in 1..i {
@@ -45,22 +45,21 @@ impl Solution {
         }
         triangle
     }
-    // best solution 
+    // best solution
     // pub fn get_row(row_index: i32) -> Vec<i32> {
     //     if (row_index < 0) {
     //         return Vec::new();
     //     }
-        
+
     //     let mut row = Solution::get_row(row_index - 1);
     //     for i in (1..row.len()).rev() {
     //         row[i] = row[i] + row[i - 1];
     //     }
-    //     row.push(1);        
-        
-    //     row        
+    //     row.push(1);
+
+    //     row
     // }
 }
-
 
 pub struct Solution;
 
@@ -71,9 +70,6 @@ mod test {
     #[test]
     fn it_works() {
         assert_eq!(Solution::get_row(0), vec![1]);
-        assert_eq!(
-            Solution::get_row(3),
-            vec![1,3,3,1]
-        );
+        assert_eq!(Solution::get_row(3), vec![1, 3, 3, 1]);
     }
 }

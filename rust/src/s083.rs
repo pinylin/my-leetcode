@@ -63,21 +63,6 @@ impl Solution {
         }
         head
     }
-
-    pub fn delete_duplicates_2(mut head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        let mut p = &mut head;
-        while let Some(cur) = p {
-            while let Some(next) = cur.next.as_mut() {
-                if cur.val != next.val {
-                    break;
-                }
-                let next_next = std::mem::replace(&mut next.next, None);
-                std::mem::replace(&mut cur.next, next_next);
-            }
-            p = &mut cur.next;
-        }
-        head
-    }
 }
 
 pub struct Solution;
@@ -88,7 +73,7 @@ mod tests {
     use crate::linkedlist;
 
     #[test]
-    fn test() {
+    fn it_works() {
         assert_eq!(
             Solution::delete_duplicates(linkedlist![1, 1, 2]),
             linkedlist![1, 2]

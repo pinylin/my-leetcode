@@ -60,3 +60,22 @@ pub mod s155;
 pub mod s167;
 pub mod s168;
 pub mod s169;
+
+pub mod s171;
+pub mod s172;
+
+pub mod s189;
+
+pub mod s198;
+
+pub mod s202;
+pub mod s203_remove_liked_list_elemnets;
+pub mod s204_count_primes;
+pub mod s205_isomorphic_strings;
+pub mod s206_reverse_linked_list;
+
+pub mod s217_contains_duplicate;
+
+pub mod s219_contains_duplicate_ii;
+
+pub mod s225_implement_stack_using_queues;
