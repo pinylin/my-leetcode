@@ -72,4 +72,4 @@ pub mod s202;
 pub mod s203_remove_liked_list_elemnets;
 pub mod s204_count_primes;
 pub mod s205_isomorphic_strings;
-
+pub mod s206_reverse_linked_list;
