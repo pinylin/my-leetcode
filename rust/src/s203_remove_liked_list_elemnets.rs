@@ -40,29 +40,33 @@
 use crate::ListNode;
 
 impl Solution {
-    pub fn remove_elements(mut head: Option<Box<ListNode>>, val: i32) -> Option<Box<ListNode>> {
-        // let mut p = &mut head;
-        // while let Some(cur) = p {
-        //     while let Some(next) = cur.next.as_mut() {
-        //         if val != next.val {
-        //             break;
-        //         }
-        //         let next_next = std::mem::replace(&mut next.next, None);
-        //         std::mem::replace(&mut cur.next, next_next);
-        //     }
-        //     p = &mut cur.next;
-        // }
-        // head
-        let mut dummy = Some(Box::new(ListNode::new(0)));
-        let mut next = dummy.as_mut();
-        while let Some(mut inner) = head {
-            head = inner.next.take();
-            if inner.val != val {
-                next.as_mut().unwrap().next = Some(inner);
-                next = next.unwrap().next.as_mut();
+    pub fn remove_elements(head: Option<Box<ListNode>>, val: i32) -> Option<Box<ListNode>> {
+        let dummy = ListNode{val: 0, next: head};
+        let mut prev = Some(Box::new(dummy));
+
+        let mut p = &mut prev;
+        while let Some(cur) = p {
+            while let Some(next) = cur.next.as_mut() {
+                if val != next.val {
+                    break;
+                }
+                let next_next = std::mem::replace(&mut next.next, None);
+                std::mem::replace(&mut cur.next, next_next);
             }
+            p = &mut cur.next;
         }
-        dummy.unwrap().next
+        prev.unwrap().next
+        
+        // let mut dummy = Some(Box::new(ListNode::new(0)));
+        // let mut next = dummy.as_mut();
+        // while let Some(mut inner) = head {
+        //     head = inner.next.take();
+        //     if inner.val != val {
+        //         next.as_mut().unwrap().next = Some(inner);
+        //         next = next.unwrap().next.as_mut();
+        //     }
+        // }
+        // dummy.unwrap().next
     }
 }
 
