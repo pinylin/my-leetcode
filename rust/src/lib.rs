@@ -79,3 +79,4 @@ pub mod s217_contains_duplicate;
 pub mod s219_contains_duplicate_ii;
 
 pub mod s225_implement_stack_using_queues;
+pub mod s226_invert_binary_tree;
