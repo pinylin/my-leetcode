@@ -83,3 +83,5 @@ pub mod s226_invert_binary_tree;
 
 pub mod s231_power_of_two;
 pub mod s232_implement_queue_using_stacks;
+
+pub mod s234_palindrome_linked_list;
