@@ -70,7 +70,7 @@ impl Solution {
     fn invert_helper(root: Option<&Rc<RefCell<TreeNode>>>) {
         if let Some(ref node) = root {
             let left = Solution::invert_tree(node.borrow().right.clone());
-            let right = Solution::invert_tree(node.clone().borrow().left.clone());
+            let right = Solution::invert_tree(node.borrow().left.clone());
             node.borrow_mut().left = left;
             node.borrow_mut().right = right;
         }
