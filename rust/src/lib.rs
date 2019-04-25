@@ -86,5 +86,6 @@ pub mod s232_implement_queue_using_stacks;
 
 pub mod s234_palindrome_linked_list;
 
+pub mod s242_valid_anagram;
 
 pub mod s257_binary_tree;

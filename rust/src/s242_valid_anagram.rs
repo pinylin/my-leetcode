@@ -38,26 +38,49 @@
  */
 impl Solution {
     pub fn is_anagram(s: String, t: String) -> bool {
-        if s.len() != t.len() {
-            return false;
-        }
-        let mut res = 0;
+        let mut band = vec![0i16; 26];
         for ch in s.chars() {
-            res = res ^ ch as u8;
-        }
-        if res == 0 {
-            if  s.chars().map(|c| c as u8).sum::<u8>() ==  t.chars().map(|c| c as u8).sum::<u8>() {
-                return true;
-        }
+            band[ch as usize - 97] += 1;
         }
         for ch in t.chars() {
-            res = res ^ ch as u8;
+            band[ch as usize - 97] -= 1;
         }
-        if res == 0 {
-            return true;
+        for item in band.iter() {
+            if *item != 0i16 {return false}
         }
+        true
+    }
 
-        false
+    pub fn is_anagram_2(s: String, t: String) -> bool {
+        let mut band = vec![0i16; 26];
+        for ch in s.chars() {
+            band[ch as usize - 97] += 1;
+        }
+        for ch in t.chars() {
+            band[ch as usize - 97] -= 1;
+        }
+        for item in band.iter() {
+            if *item != 0i16 {return false}
+        }
+        true
     }
 }
 
+pub struct Solution;
+
+#[cfg(test)]
+
+mod test {
+    use super::Solution;
+    #[test]
+    fn it_works() {
+        assert_eq!(
+            Solution::is_anagram("aa".to_owned(), "bb".to_owned()), 
+            false
+        );
+        assert_eq!(
+            Solution::is_anagram("xaaddy".to_owned(), "xbbccy".to_owned()), 
+            false
+        );
+    }
+}
