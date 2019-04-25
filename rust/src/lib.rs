@@ -90,3 +90,5 @@ pub mod s242_valid_anagram;
 
 pub mod s257_binary_tree;
 pub mod s258_add_digits;
+
+pub mod s263_ugly_number;
