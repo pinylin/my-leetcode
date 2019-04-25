@@ -89,3 +89,4 @@ pub mod s234_palindrome_linked_list;
 pub mod s242_valid_anagram;
 
 pub mod s257_binary_tree;
+pub mod s258_add_digits;

@@ -50,20 +50,6 @@ impl Solution {
         }
         true
     }
-
-    pub fn is_anagram_2(s: String, t: String) -> bool {
-        let mut band = vec![0i16; 26];
-        for ch in s.chars() {
-            band[ch as usize - 97] += 1;
-        }
-        for ch in t.chars() {
-            band[ch as usize - 97] -= 1;
-        }
-        for item in band.iter() {
-            if *item != 0i16 {return false}
-        }
-        true
-    }
 }
 
 pub struct Solution;
