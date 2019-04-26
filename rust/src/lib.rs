@@ -98,3 +98,5 @@ pub mod s268_missing_number;
 pub mod s283_move_zeroes;
 
 pub mod s290_word_pattern;
+
+pub mod s292_nim_game;
