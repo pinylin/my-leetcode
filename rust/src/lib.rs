@@ -94,3 +94,5 @@ pub mod s258_add_digits;
 pub mod s263_ugly_number;
 
 pub mod s268_missing_number;
+
+pub mod s283_move_zeroes;
