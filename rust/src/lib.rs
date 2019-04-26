@@ -107,3 +107,5 @@ pub mod s350_intersection_of_two_arrays_ii;
 pub mod s367_valid_perfect_square;
 
 pub mod s383_ransom_note;
+
+pub mod s387_first_unique_character_in_a_string;
