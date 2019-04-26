@@ -96,3 +96,5 @@ pub mod s263_ugly_number;
 pub mod s268_missing_number;
 
 pub mod s283_move_zeroes;
+
+pub mod s290_word_pattern;
