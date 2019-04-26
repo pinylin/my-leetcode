@@ -102,3 +102,6 @@ pub mod s290_word_pattern;
 pub mod s292_nim_game;
 
 pub mod s349_intersection_of_two_arrays;
+pub mod s350_intersection_of_two_arrays_ii;
+
+pub mod s367_valid_perfect_square;
