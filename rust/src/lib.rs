@@ -105,3 +105,5 @@ pub mod s349_intersection_of_two_arrays;
 pub mod s350_intersection_of_two_arrays_ii;
 
 pub mod s367_valid_perfect_square;
+
+pub mod s383_ransom_note;
