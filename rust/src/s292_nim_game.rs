@@ -20,9 +20,6 @@ mod test {
     use super::Solution;
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::can_win_nim(4), 
-            false
-        );
+        assert_eq!(Solution::can_win_nim(4), false);
     }
 }

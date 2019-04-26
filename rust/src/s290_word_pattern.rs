@@ -10,13 +10,17 @@ impl Solution {
             return str.is_empty();
         }
 
-        let words: Vec<String> = str.split(' ').filter(|x| !x.is_empty()).map(|x| x.to_string()).collect();
+        let words: Vec<String> = str
+            .split(' ')
+            .filter(|x| !x.is_empty())
+            .map(|x| x.to_string())
+            .collect();
         if words.len() != pattern.len() {
             return false;
         }
-        let mut set = HashSet::new(); 
+        let mut set = HashSet::new();
         let mut word_set = HashSet::new();
-        let mut p_set = HashSet::new(); 
+        let mut p_set = HashSet::new();
         for (i, ch) in pattern.chars().enumerate() {
             p_set.insert(ch);
             word_set.insert(format!("{}", words[i]));

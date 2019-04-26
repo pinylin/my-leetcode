@@ -26,9 +26,6 @@ mod test {
     fn it_works() {
         let mut nums = vec![0, 1, 0, 3, 12, 0];
         Solution::move_zeroes(&mut nums);
-        assert_eq!(
-            nums, 
-            vec![1, 3, 12, 0, 0, 0]
-        );
+        assert_eq!(nums, vec![1, 3, 12, 0, 0, 0]);
     }
 }

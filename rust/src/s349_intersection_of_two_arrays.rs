@@ -11,9 +11,20 @@ impl Solution {
         let mut i = 0;
         let mut j = 0;
         while i < nums1.len() && j < nums2.len() {
-            if nums1[i] > nums2[j] { j += 1; continue; }
-            if nums1[i] == nums2[j] { nums.push(nums1[i]); i += 1; j += 1; continue; }
-            if nums1[i] < nums2[j] { i += 1; continue; }
+            if nums1[i] > nums2[j] {
+                j += 1;
+                continue;
+            }
+            if nums1[i] == nums2[j] {
+                nums.push(nums1[i]);
+                i += 1;
+                j += 1;
+                continue;
+            }
+            if nums1[i] < nums2[j] {
+                i += 1;
+                continue;
+            }
         }
         nums.dedup();
         nums

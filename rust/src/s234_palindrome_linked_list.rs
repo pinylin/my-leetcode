@@ -12,22 +12,22 @@
  * Testcase Example:  '[1,2]'
  *
  * Given a singly linked list, determine if it is a palindrome.
- * 
+ *
  * Example 1:
- * 
- * 
+ *
+ *
  * Input: 1->2
  * Output: false
- * 
+ *
  * Example 2:
- * 
- * 
+ *
+ *
  * Input: 1->2->2->1
  * Output: true
- * 
+ *
  * Follow up:
  * Could you do it in O(n) time and O(1) space?
- * 
+ *
  */
 // Definition for singly-linked list.
 // #[derive(PartialEq, Eq, Clone, Debug)]
@@ -35,7 +35,7 @@
 //   pub val: i32,
 //   pub next: Option<Box<ListNode>>
 // }
-// 
+//
 // impl ListNode {
 //   #[inline]
 //   fn new(val: i32) -> Self {
@@ -59,11 +59,13 @@ impl Solution {
                 cur = node.next.as_ref();
             }
         }
-        if count < 2 { return true; }
+        if count < 2 {
+            return true;
+        }
         count = if count % 2 == 0 {
-            count/2
+            count / 2
         } else {
-            count/2+1
+            count / 2 + 1
         };
         let mut mid = &mut head;
         for _ in 0..count {
@@ -79,19 +81,18 @@ impl Solution {
         }
         let mut t_head = prev.as_ref();
         let mut p_head = head.as_ref();
-        while let Some(t) = t_head.take()  {
+        while let Some(t) = t_head.take() {
             if let Some(p) = p_head.take() {
                 if p.val != t.val {
                     return false;
-                } 
-                p_head = p.next.as_ref(); 
+                }
+                p_head = p.next.as_ref();
             } else {
                 return false;
             }
             t_head = t.next.as_ref();
         }
         true
-
     }
 }
 
@@ -106,13 +107,7 @@ mod test {
     fn it_works() {
         let l1 = linkedlist![1, 2, 2147483647];
         let l2 = linkedlist![1, 2, 1];
-        assert_eq!(
-            Solution::is_palindrome(l1),
-            false
-        );
-        assert_eq!(
-            Solution::is_palindrome(l2),
-            true
-        );
+        assert_eq!(Solution::is_palindrome(l1), false);
+        assert_eq!(Solution::is_palindrome(l2), true);
     }
 }

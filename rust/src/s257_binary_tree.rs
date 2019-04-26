@@ -12,24 +12,24 @@
  * Testcase Example:  '[1,2,3,null,5]'
  *
  * Given a binary tree, return all root-to-leaf paths.
- * 
+ *
  * Note: A leaf is a node with no children.
- * 
+ *
  * Example:
- * 
- * 
+ *
+ *
  * Input:
- * 
+ *
  * ⁠  1
  * ⁠/   \
  * 2     3
  * ⁠\
  * ⁠ 5
- * 
+ *
  * Output: ["1->2->5", "1->3"]
- * 
+ *
  * Explanation: All root-to-leaf paths are: 1->2->5, 1->3
- * 
+ *
  */
 // Definition for a binary tree node.
 // #[derive(Debug, PartialEq, Eq)]
@@ -38,7 +38,7 @@
 //   pub left: Option<Rc<RefCell<TreeNode>>>,
 //   pub right: Option<Rc<RefCell<TreeNode>>>,
 // }
-// 
+//
 // impl TreeNode {
 //   #[inline]
 //   pub fn new(val: i32) -> Self {
@@ -49,9 +49,9 @@
 //     }
 //   }
 // }
-use std::rc::Rc;
-use std::cell::RefCell;
 use crate::TreeNode;
+use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     pub fn binary_tree_paths(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<String> {
         let mut res = Vec::new();
@@ -72,7 +72,7 @@ impl Solution {
             }
             if cur.left == None && cur.right == None {
                 res.push(path);
-                return
+                return;
             }
             if cur.left != None {
                 Solution::path_helper(cur.left.as_ref(), res, path.clone());
@@ -94,7 +94,7 @@ mod test {
     #[test]
     fn it_works() {
         assert_eq!(
-            Solution::binary_tree_paths(btree![1, 2, 3, null, 5]), 
+            Solution::binary_tree_paths(btree![1, 2, 3, null, 5]),
             vec!["1->2->5", "1->3"]
         );
     }
