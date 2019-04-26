@@ -100,3 +100,5 @@ pub mod s283_move_zeroes;
 pub mod s290_word_pattern;
 
 pub mod s292_nim_game;
+
+pub mod s349_intersection_of_two_arrays;
