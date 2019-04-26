@@ -9,10 +9,10 @@ impl Solution {
         // 得快点改
         let mut band = vec![0; 26];
         for ch in s.bytes() {
-            band[(ch -b'a') as usize] += 1;
+            band[(ch - b'a') as usize] += 1;
         }
         for (i, ch) in s.bytes().enumerate() {
-            if band[(ch -b'a') as usize] == 1 {
+            if band[(ch - b'a') as usize] == 1 {
                 return i as i32;
             }
         }

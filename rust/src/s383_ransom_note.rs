@@ -6,12 +6,12 @@
 impl Solution {
     pub fn can_construct(ransom_note: String, magazine: String) -> bool {
         let mut count = vec![0; 26];
-        for &c in magazine.as_bytes() {
-            count[(c - 97) as usize] += 1;
+        for ch in magazine.bytes() {
+            count[(ch - b'a') as usize] += 1;
         }
-        for &c in ransom_note.as_bytes() {
-            count[(c - 97) as usize] -= 1;
-            if count[(c - 97) as usize] < 0 {
+        for ch in ransom_note.bytes() {
+            count[(ch - b'a') as usize] -= 1;
+            if count[(ch - b'a') as usize] < 0 {
                 return false;
             }
         }

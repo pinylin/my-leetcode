@@ -38,15 +38,15 @@
  */
 impl Solution {
     pub fn is_anagram(s: String, t: String) -> bool {
-        let mut band = vec![0i16; 26];
-        for ch in s.chars() {
-            band[ch as usize - 97] += 1;
+        let mut band = vec![0; 26];
+        for ch in s.bytes() {
+            band[(ch - b'a') as usize] += 1;
         }
-        for ch in t.chars() {
-            band[ch as usize - 97] -= 1;
+        for ch in t.bytes() {
+            band[(ch - b'a') as usize] -= 1;
         }
         for item in band.iter() {
-            if *item != 0i16 {
+            if *item != 0 {
                 return false;
             }
         }
