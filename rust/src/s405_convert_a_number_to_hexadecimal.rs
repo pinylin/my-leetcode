@@ -6,9 +6,7 @@
 impl Solution {
     pub fn to_hex(num: i32) -> String {
         let bits = vec![
-            '0', '1', '2', '3', '4', '5',
-            '6', '7', '8', '9', 'a', 'b',
-            'c', 'd', 'e', 'f'
+            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f',
         ];
         let mut num = num as u32;
         if num == 0 {
@@ -31,13 +29,7 @@ mod test {
     use super::Solution;
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::to_hex(26),
-            "1a".to_owned()
-        );
-        assert_eq!(
-            Solution::to_hex(-1),
-            "ffffffff".to_owned()
-        );
+        assert_eq!(Solution::to_hex(26), "1a".to_owned());
+        assert_eq!(Solution::to_hex(-1), "ffffffff".to_owned());
     }
 }

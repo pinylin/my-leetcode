@@ -10,7 +10,7 @@
 //   pub left: Option<Rc<RefCell<TreeNode>>>,
 //   pub right: Option<Rc<RefCell<TreeNode>>>,
 // }
-// 
+//
 // impl TreeNode {
 //   #[inline]
 //   pub fn new(val: i32) -> Self {
@@ -21,9 +21,9 @@
 //     }
 //   }
 // }
-use std::rc::Rc;
-use std::cell::RefCell;
 use crate::TreeNode;
+use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     pub fn sum_of_left_leaves(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         Solution::helper(root.as_ref(), 0)
@@ -37,8 +37,7 @@ impl Solution {
                     return cur.val;
                 }
                 Solution::helper(cur.left.as_ref(), 1) + Solution::helper(cur.right.as_ref(), 0)
-                
-           }
+            }
         }
     }
 }
@@ -52,10 +51,7 @@ mod test {
     use crate::btree;
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::sum_of_left_leaves(btree![1, 2, 3, null, 5]),
-            0
-        );
+        assert_eq!(Solution::sum_of_left_leaves(btree![1, 2, 3, null, 5]), 0);
         assert_eq!(
             Solution::sum_of_left_leaves(btree![3, 9, 20, None, None, 15, 7]),
             24
