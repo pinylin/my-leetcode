@@ -54,7 +54,7 @@ impl Solution {
         let mut n = n;
         while n != 0 {
             res += (n % 10).pow(2);
-            n = n / 10;
+            n /= 10;
         }
         res
     }

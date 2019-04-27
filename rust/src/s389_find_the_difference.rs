@@ -6,10 +6,10 @@
 impl Solution {
     pub fn find_the_difference(s: String, t: String) -> char {
         let mut res: u8 = 0;
-        for i in s.chars(){
+        for i in s.chars() {
             res ^= i as u8;
         }
-        for i in t.chars(){
+        for i in t.chars() {
             res ^= i as u8;
         }
         res as char

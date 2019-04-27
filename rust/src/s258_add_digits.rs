@@ -31,7 +31,7 @@ impl Solution {
         let ret = num
             .to_string()
             .bytes()
-            .fold(0, |acc, c| acc + (c - b'0') as i32);
+            .fold(0, |acc, c| acc + i32::from(c - b'0'));
         if ret >= 10 {
             Self::add_digits(ret)
         } else {

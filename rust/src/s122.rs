@@ -55,18 +55,18 @@
  */
 impl Solution {
     pub fn max_profit(prices: Vec<i32>) -> i32 {
-        if prices.len() < 1 {
+        if prices.is_empty() {
             return 0;
         }
         let (mut hp, mut lp) = (prices[0], prices[0]);
         let mut money = 0;
-        for i in 1..prices.len() {
-            if prices[i] < lp || prices[i] < hp {
+        for item in prices.iter().skip(1) {
+            if *item < lp || *item < hp {
                 money += hp - lp;
-                lp = prices[i];
+                lp = *item;
                 hp = lp;
             } else {
-                hp = prices[i];
+                hp = *item;
             }
         }
         money += hp - lp;

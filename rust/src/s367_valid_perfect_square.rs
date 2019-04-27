@@ -8,7 +8,7 @@ impl Solution {
         if num < 2 {
             return true;
         }
-        let num = num as i64;
+        let num = i64::from(num);
         let (mut left, mut right) = (2, num / 2);
         while left <= right {
             let mid = (left + right) / 2;

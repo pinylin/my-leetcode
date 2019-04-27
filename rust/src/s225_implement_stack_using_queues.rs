@@ -67,14 +67,14 @@ impl MyStack {
     /** Removes the element on top of the stack and returns that element. */
     fn pop(&mut self) -> i32 {
         match self.stack.pop() {
-            Some(i) => return i,
-            None => return 0,
+            Some(i) => i,
+            None => 0,
         }
     }
 
     /** Get the top element. */
     fn top(&self) -> i32 {
-        if self.stack.len() > 0 {
+        if !self.stack.is_empty() {
             return self.stack[self.stack.len() - 1];
         }
         0
@@ -82,7 +82,7 @@ impl MyStack {
 
     /** Returns whether the stack is empty. */
     fn empty(&self) -> bool {
-        if self.stack.len() > 0 {
+        if !self.stack.is_empty() {
             return false;
         }
         true

@@ -28,13 +28,7 @@ mod test {
     use super::Solution;
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::first_uniq_char("abcd".to_owned()),
-            0
-        );
-        assert_eq!(
-            Solution::first_uniq_char("leetcode".to_owned()),
-            0
-        );
+        assert_eq!(Solution::first_uniq_char("abcd".to_owned()), 0);
+        assert_eq!(Solution::first_uniq_char("leetcode".to_owned()), 0);
     }
 }

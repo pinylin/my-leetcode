@@ -28,14 +28,14 @@ impl Solution {
             return 0;
         }
         let mut nums = vec![true; n as usize];
-        for i in 2..((n as f64).sqrt() as usize) + 1 {
+        for i in 2..=(f64::from(n).sqrt() as usize) {
             if nums[i] {
                 for j in (i..n as usize).take_while(|x| x * i < n as usize) {
                     nums[i * j] = false;
                 }
             }
         }
-        nums.into_iter().filter(|&x| x == true).count() as i32 - 2
+        nums.into_iter().filter(|&x| x).count() as i32 - 2
     }
 }
 

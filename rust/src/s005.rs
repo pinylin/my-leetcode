@@ -64,7 +64,7 @@ impl Solution {
             }
         }
 
-        s[curr_start..curr_end + 1].to_owned()
+        s[curr_start..=curr_end].to_owned()
     }
 }
 

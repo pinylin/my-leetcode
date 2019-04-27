@@ -35,7 +35,7 @@
 impl Solution {
     pub fn get_row(row_index: i32) -> Vec<i32> {
         let mut triangle = vec![1; (row_index + 1) as usize];
-        for i in 1..row_index + 1 {
+        for i in 1..=row_index {
             let mut prev = 1;
             for j in 1..i {
                 let temp = triangle[j as usize];

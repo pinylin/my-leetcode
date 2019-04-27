@@ -71,13 +71,10 @@ impl MinStack {
     }
     // 若 pop出的数= min,则self.min = 下一次pop出的数
     fn pop(&mut self) {
-        match self.stack.pop() {
-            Some(i) => {
-                if i == self.min {
-                    self.min = self.stack.pop().unwrap()
-                }
+        if let Some(i) = self.stack.pop() {
+            if i == self.min {
+                self.min = self.stack.pop().unwrap()
             }
-            None => {}
         };
     }
 

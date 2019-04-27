@@ -40,7 +40,7 @@ impl Solution {
         s.trim()
             .split_whitespace()
             .last()
-            .map(|s| s.len())
+            .map(str::len)
             .unwrap_or(0) as i32
     }
 }

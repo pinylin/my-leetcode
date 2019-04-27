@@ -65,7 +65,7 @@ impl Solution {
         if let Some(ref node) = root {
             let cur = node.borrow();
             let mut path = str_path;
-            if path.len() == 0 {
+            if path.is_empty() {
                 path = format!("{}", cur.val)
             } else {
                 path = format!("{}->{}", path, cur.val)

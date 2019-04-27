@@ -13,7 +13,7 @@ impl Solution {
         let words: Vec<String> = str
             .split(' ')
             .filter(|x| !x.is_empty())
-            .map(|x| x.to_string())
+            .map(std::string::ToString::to_string)
             .collect();
         if words.len() != pattern.len() {
             return false;
@@ -23,7 +23,7 @@ impl Solution {
         let mut p_set = HashSet::new();
         for (i, ch) in pattern.chars().enumerate() {
             p_set.insert(ch);
-            word_set.insert(format!("{}", words[i]));
+            word_set.insert(words[i].to_string());
             set.insert(format!("{}{}", ch, words[i]));
         }
         if p_set.len() == word_set.len() && p_set.len() == set.len() {

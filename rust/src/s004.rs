@@ -48,10 +48,10 @@ impl Solution {
         };
         let half = (m + n + 1) / 2;
         binary_search_by(a, |i| {
-            let j = half - i - 1;
-            if a[i] > b[j] {
+            let jdx = half - i - 1;
+            if a[i] > b[jdx] {
                 Ordering::Greater
-            } else if i + 1 < m && j > 1 && a[i + 1] < b[j - 1] {
+            } else if i + 1 < m && jdx > 1 && a[i + 1] < b[jdx - 1] {
                 Ordering::Less
             } else {
                 Ordering::Equal
@@ -60,25 +60,25 @@ impl Solution {
         .map(|i| i + 1)
         .or_else(|i| -> Result<usize, usize> { Ok(i) })
         .map(|i| {
-            let j = half - i;
+            let jdx = half - i;
             let left_max = if i == 0 {
-                b[j - 1]
-            } else if j == 0 {
+                b[jdx - 1]
+            } else if jdx == 0 {
                 a[i - 1]
             } else {
-                std::cmp::max(a[i - 1], b[j - 1])
+                std::cmp::max(a[i - 1], b[jdx - 1])
             };
             if (m + n) % 2 == 1 {
-                left_max as f64
+                f64::from(left_max)
             } else {
                 let right_min = if i == m {
-                    b[j]
-                } else if j == n {
+                    b[jdx]
+                } else if jdx == n {
                     a[i]
                 } else {
-                    std::cmp::min(a[i], b[j])
+                    std::cmp::min(a[i], b[jdx])
                 };
-                (left_max + right_min) as f64 / 2.0
+                f64::from(left_max + right_min) / 2.0
             }
         })
         .unwrap()

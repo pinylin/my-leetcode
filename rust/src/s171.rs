@@ -53,7 +53,7 @@ impl Solution {
         let sv = s.as_bytes();
         let mut res = 0;
         for i in 0..sv.len() {
-            res += (sv[i] - 64) as i32 * i32::pow(26, (sv.len() - i - 1) as u32);
+            res += i32::from(sv[i] - 64) * i32::pow(26, (sv.len() - i - 1) as u32);
         }
         res as i32
     }

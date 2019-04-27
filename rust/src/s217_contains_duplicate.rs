@@ -52,7 +52,7 @@ impl Solution {
             }
         }
 
-        return false;
+        false
     }
 
     pub fn contains_duplicate_2(nums: Vec<i32>) -> bool {

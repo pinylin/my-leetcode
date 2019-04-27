@@ -71,23 +71,23 @@ impl MyQueue {
 
     /** Removes the element from in front of queue and returns that element. */
     fn pop(&mut self) -> i32 {
-        if self.out_stack.len() < 1 {
+        if self.out_stack.is_empty() {
             self.in_stack.reverse();
             mem::swap(&mut self.in_stack, &mut self.out_stack);
         }
         match self.out_stack.pop() {
-            Some(i) => return i,
-            None => return 0,
+            Some(i) => i,
+            None => 0,
         }
     }
 
     /** Get the front element. */
     fn peek(&mut self) -> i32 {
-        if self.out_stack.len() < 1 {
+        if self.out_stack.is_empty() {
             self.in_stack.reverse();
             mem::swap(&mut self.in_stack, &mut self.out_stack);
         }
-        if self.out_stack.len() > 0 {
+        if !self.out_stack.is_empty() {
             return self.out_stack[self.out_stack.len() - 1];
         }
         0
@@ -95,7 +95,7 @@ impl MyQueue {
 
     /** Returns whether the queue is empty. */
     fn empty(&self) -> bool {
-        if self.in_stack.len() > 0 || self.out_stack.len() > 0 {
+        if !self.in_stack.is_empty() || !self.out_stack.is_empty() {
             return false;
         }
         true
