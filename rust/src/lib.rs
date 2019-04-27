@@ -121,3 +121,5 @@ pub mod s405_convert_a_number_to_hexadecimal;
 pub mod s409_longest_palindrome;
 
 pub mod s412_fizz_buzz;
+
+pub mod s414_third_maximum_number;
