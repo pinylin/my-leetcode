@@ -113,3 +113,4 @@ pub mod s387_first_unique_character_in_a_string;
 pub mod s389_find_the_difference;
 
 pub mod s400_nth_digit;
+pub mod s401_binary_watch;
