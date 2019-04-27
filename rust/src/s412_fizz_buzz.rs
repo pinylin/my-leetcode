@@ -17,9 +17,9 @@ impl Solution {
                 res.push("Buzz".to_string());
             } else {
                 res.push(format!("{}", i));
+            }
         }
-    }
-    res
+        res
     }
 }
 
@@ -31,25 +31,12 @@ mod test {
     use super::Solution;
     #[test]
     fn it_works() {
-        assert_eq!(Solution::fizz_buzz(15),
-        vec![
-            "1",
-            "2",
-            "Fizz",
-            "4",
-            "Buzz",
-            "Fizz",
-            "7",
-            "8",
-            "Fizz",
-            "Buzz",
-            "11",
-            "Fizz",
-            "13",
-            "14",
-            "FizzBuzz"
-        ]
+        assert_eq!(
+            Solution::fizz_buzz(15),
+            vec![
+                "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz",
+                "13", "14", "FizzBuzz"
+            ]
         );
-
     }
 }
