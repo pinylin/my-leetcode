@@ -123,3 +123,5 @@ pub mod s409_longest_palindrome;
 pub mod s412_fizz_buzz;
 
 pub mod s414_third_maximum_number;
+
+pub mod s434_number_of_segments_in_a_string;
