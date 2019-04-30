@@ -128,3 +128,5 @@ pub mod s415_add_strings;
 pub mod s434_number_of_segments_in_a_string;
 
 pub mod s438_find_all_anagrams_in_a_string;
+
+pub mod s441_arranging_coins;
