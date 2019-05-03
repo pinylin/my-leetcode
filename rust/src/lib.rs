@@ -131,3 +131,7 @@ pub mod s437_path_sum_iii;
 pub mod s438_find_all_anagrams_in_a_string;
 
 pub mod s441_arranging_coins;
+
+pub mod s443_string_compression;
+
+pub mod s447_number_of_boomerangs;
