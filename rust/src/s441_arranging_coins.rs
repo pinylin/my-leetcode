@@ -4,9 +4,8 @@
  * [441] Arranging Coins
  */
 impl Solution {
-    
     pub fn arrange_coins(n: i32) -> i32 {
-        (-1 + (1.0+8.0*(n as f64)).sqrt() as i32) / 2
+        (-1 + (1.0 + 8.0 * (n as f64)).sqrt() as i32) / 2
         // if n < 2 { return n;}
         // let n = n as i64;
         // for i in 1..n+1 {
@@ -29,13 +28,7 @@ mod test {
     use super::Solution;
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::arrange_coins(2),
-            1
-        );
-        assert_eq!(
-            Solution::arrange_coins(1804289383), 
-            60070
-        );
+        assert_eq!(Solution::arrange_coins(2), 1);
+        assert_eq!(Solution::arrange_coins(1804289383), 60070);
     }
 }
