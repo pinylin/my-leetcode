@@ -53,10 +53,10 @@ impl Solution {
             }
 
             if cur.left != None {
-                Solution::path_helper(cur.left.as_ref(), res, path.clone(), sum);
+                Solution::path_helper(cur.left.as_ref(), res, path, sum);
             }
             if cur.right != None {
-                Solution::path_helper(cur.right.as_ref(), res, path.clone(), sum);
+                Solution::path_helper(cur.right.as_ref(), res, path, sum);
             }
         }
     }
