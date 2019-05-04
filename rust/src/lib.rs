@@ -136,3 +136,7 @@ pub mod s443_string_compression;
 
 pub mod s447_number_of_boomerangs;
 pub mod s448_find_all_numbers_disappeared_in_array;
+
+pub mod s453_minimum_moves_to_equal_array_elements;
+
+pub mod s455_assign_cookies;
