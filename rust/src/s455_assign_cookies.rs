@@ -8,8 +8,8 @@ impl Solution {
         g.sort();
         s.sort();
         let mut j = 0;
-        for i in 0..s.len() {
-            if j < g.len() && s[i] >= g[j] {
+        for item in &s {
+            if j < g.len() && *item >= g[j] {
                 j += 1;
             }
         }
