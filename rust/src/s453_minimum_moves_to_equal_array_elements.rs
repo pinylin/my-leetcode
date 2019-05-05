@@ -11,7 +11,7 @@ impl Solution {
             sum += i;
             if i < min {
                 min = i;
-            } 
+            }
         }
         sum - min * nums.len() as i32
     }
@@ -25,9 +25,6 @@ mod test {
     use super::Solution;
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::min_moves(vec![1,2,3]),
-            3
-        );
+        assert_eq!(Solution::min_moves(vec![1, 2, 3]), 3);
     }
 }
