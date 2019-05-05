@@ -142,3 +142,5 @@ pub mod s453_minimum_moves_to_equal_array_elements;
 pub mod s455_assign_cookies;
 
 pub mod s461_hamming_distance;
+
+pub mod s463_island_perimeter;
