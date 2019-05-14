@@ -10,7 +10,7 @@ impl Solution {
         for item in nums.iter() {
             if item == &1 {
                 counter += 1;
-            }else {
+            } else {
                 res = std::cmp::max(res, counter);
                 counter = 0;
             }
@@ -28,7 +28,7 @@ mod test {
     #[test]
     fn it_works() {
         assert_eq!(
-            Solution::find_max_consecutive_ones(vec![0,3,1,5,52,1,1]),
+            Solution::find_max_consecutive_ones(vec![0, 3, 1, 5, 52, 1, 1]),
             2
         );
     }
