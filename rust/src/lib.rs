@@ -149,3 +149,5 @@ pub mod s475_heaters;
 pub mod s476_number_complement;
 
 pub mod s482_license_key_formatting;
+
+pub mod s485_max_consecutive_ones;
