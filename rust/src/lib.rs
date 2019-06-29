@@ -153,3 +153,6 @@ pub mod s482_license_key_formatting;
 pub mod s485_max_consecutive_ones;
 
 pub mod s492_construct_the_rectangle;
+pub mod s493_reverse_pairs;
+
+pub mod s496_next_greater_element;
