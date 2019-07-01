@@ -156,6 +156,9 @@ pub mod s485_max_consecutive_ones;
 pub mod s492_construct_the_rectangle;
 pub mod s493_reverse_pairs;
 
+pub mod s496_next_greater_element;
+
 pub mod s504_base_7;
 
 pub mod s506_relative_ranks;
+

@@ -11,7 +11,7 @@ impl Solution {
         if nl < 2 {
             return 0;
         }
-        return Solution::merge_helper(nums.as_mut(), 0, nl - 1);
+        Solution::merge_helper(nums.as_mut(), 0, nl - 1)
     }
     fn merge_helper(nums: &mut Vec<i32>, left: usize, right: usize) -> i32 {
         if left >= right {
@@ -30,12 +30,12 @@ impl Solution {
         Solution::merge(nums, left, mid, right);
         res
     }
-    fn merge(a: &mut Vec<i32>, b: usize, m: usize, e: usize) {
-        let mut left = a[b..m + 1].to_vec();
-        let mut right = a[m + 1..e + 1].to_vec();
+    fn merge(a: &mut Vec<i32>, b: usize, m:usize, e:usize) {
+        let mut left = a[b..=m].to_vec();
+        let mut right = a[m+1..=e].to_vec();
         left.reverse();
         right.reverse();
-        for k in b..e + 1 {
+        for k in b..=e {
             if left.is_empty() {
                 a[k] = right.pop().unwrap();
                 continue;
