@@ -3,24 +3,27 @@
  *
  * [509] Fibonacci Number
  */
-use std::hash::Hash;
 use std::collections::HashMap;
+use std::hash::Hash;
 impl Solution {
     pub fn fib(n: i32) -> i32 {
         Solution::fib_memo(&mut HashMap::new(), n as u32) as i32
     }
-    fn fib_memo (cache: &mut HashMap<u32, u32>, arg: u32) -> u32 {
+    fn fib_memo(cache: &mut HashMap<u32, u32>, arg: u32) -> u32 {
         match arg {
             0 => 0,
             1 => 1,
-            n => Solution::memoize(cache, Solution::fib_memo, n - 1) + 
-                Solution::memoize(cache, Solution::fib_memo, arg - 2),
+            n => {
+                Solution::memoize(cache, Solution::fib_memo, n - 1)
+                    + Solution::memoize(cache, Solution::fib_memo, arg - 2)
+            }
         }
     }
-    fn memoize<A, R, F> (cache: &mut HashMap<A, R>, func: F, arg: A) -> R where
+    fn memoize<A, R, F>(cache: &mut HashMap<A, R>, func: F, arg: A) -> R
+    where
         A: Eq + Hash + Clone,
         R: Clone,
-        F: Fn(&mut HashMap<A, R>, A) -> R
+        F: Fn(&mut HashMap<A, R>, A) -> R,
     {
         match cache.get(&arg).cloned() {
             Some(result) => result,

@@ -161,4 +161,9 @@ pub mod s496_next_greater_element;
 pub mod s504_base_7;
 
 pub mod s506_relative_ranks;
+pub mod s507_perfect_number;
 
+pub mod s509_fibonacci_number;
+
+pub mod s520_detect_capital;
+pub mod s521_longest_uncommon_subsequence;

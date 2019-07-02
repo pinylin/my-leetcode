@@ -30,9 +30,9 @@ impl Solution {
         Solution::merge(nums, left, mid, right);
         res
     }
-    fn merge(a: &mut Vec<i32>, b: usize, m:usize, e:usize) {
+    fn merge(a: &mut Vec<i32>, b: usize, m: usize, e: usize) {
         let mut left = a[b..=m].to_vec();
-        let mut right = a[m+1..=e].to_vec();
+        let mut right = a[m + 1..=e].to_vec();
         left.reverse();
         right.reverse();
         for k in b..=e {
