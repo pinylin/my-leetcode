@@ -1,3 +1,7 @@
+use leetcode_prelude::TreeNode;
+use std::rc::Rc;
+use std::cell::RefCell;
+
 pub fn merge_sort(a: &mut Vec<i32>, b: usize, e: usize) {
     if b < e {
         let m = (b + e) / 2;
@@ -25,5 +29,25 @@ fn merge(a: &mut Vec<i32>, b: usize, m: usize, e: usize) {
         } else {
             a[k] = left.pop().unwrap();
         }
+    }
+}
+
+pub struct Sort{}
+impl Sort {
+    pub fn inorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
+        if root.is_none() {
+            return vec![];
+        }
+        let mut v = Vec::new();
+        let left = root.as_ref().unwrap().borrow().left.clone();
+        let right = root.as_ref().unwrap().borrow().right.clone();
+        if left.is_some() {
+            v.extend(Self::inorder_traversal(left));
+        }
+        v.push(root.unwrap().borrow().val);
+        if right.is_some() {
+            v.extend(Self::inorder_traversal(right));
+        }
+        v
     }
 }

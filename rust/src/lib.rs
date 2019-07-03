@@ -167,3 +167,7 @@ pub mod s509_fibonacci_number;
 
 pub mod s520_detect_capital;
 pub mod s521_longest_uncommon_subsequence;
+
+pub mod s530_minimum_difference;
+
+pub mod s532_diff_pairs_in_array;
