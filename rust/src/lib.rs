@@ -171,3 +171,5 @@ pub mod s521_longest_uncommon_subsequence;
 pub mod s530_minimum_difference;
 
 pub mod s532_diff_pairs_in_array;
+
+pub mod s538_convert_bst_greater_tree;

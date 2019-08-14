@@ -33,7 +33,6 @@ pub struct Solution;
 
 mod test {
     use super::Solution;
-    use crate::btree;
     #[test]
     fn it_works() {
         assert_eq!(
