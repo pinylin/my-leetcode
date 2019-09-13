@@ -156,3 +156,5 @@ pub mod s492_construct_the_rectangle;
 pub mod s493_reverse_pairs;
 
 pub mod s496_next_greater_element;
+
+pub mod s500_keyboard_row;
