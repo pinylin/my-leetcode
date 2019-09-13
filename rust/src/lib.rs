@@ -2,6 +2,7 @@
 #![feature(proc_macro_hygiene)]
 
 pub use leetcode_prelude::{btree, linkedlist, ListNode, TreeNode};
+pub mod utils;
 
 pub mod s001;
 pub mod s002;
@@ -158,3 +159,19 @@ pub mod s493_reverse_pairs;
 pub mod s496_next_greater_element;
 
 pub mod s500_keyboard_row;
+
+pub mod s504_base_7;
+
+pub mod s506_relative_ranks;
+pub mod s507_perfect_number;
+
+pub mod s509_fibonacci_number;
+
+pub mod s520_detect_capital;
+pub mod s521_longest_uncommon_subsequence;
+
+pub mod s530_minimum_difference;
+
+pub mod s532_diff_pairs_in_array;
+
+pub mod s538_convert_bst_greater_tree;
