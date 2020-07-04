@@ -10,7 +10,7 @@
 //   pub left: Option<Rc<RefCell<TreeNode>>>,
 //   pub right: Option<Rc<RefCell<TreeNode>>>,
 // }
-// 
+//
 // impl TreeNode {
 //   #[inline]
 //   pub fn new(val: i32) -> Self {
@@ -22,8 +22,8 @@
 //   }
 // }
 use leetcode_prelude::TreeNode;
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     pub fn get_minimum_difference(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         let v = Solution::inorder_traversal(root);
@@ -60,9 +60,6 @@ mod test {
     use crate::btree;
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::get_minimum_difference(btree![1, null, 3, 2]),
-            1
-        );
+        assert_eq!(Solution::get_minimum_difference(btree![1, null, 3, 2]), 1);
     }
 }

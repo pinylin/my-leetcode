@@ -14,7 +14,7 @@ impl Solution {
                 sum += i + (num / i);
             }
         }
-        return num != 1 && sum == num;
+        num != 1 && sum == num
     }
 }
 

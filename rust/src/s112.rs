@@ -60,7 +60,7 @@ impl Solution {
             return false;
         }
         let mut que = VecDeque::new();
-        que.push_back((0, root.unwrap().clone()));
+        que.push_back((0, root.unwrap()));
         while !que.is_empty() {
             if let Some((acc, node)) = que.pop_front() {
                 let acc = acc + node.borrow().val;

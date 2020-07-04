@@ -10,7 +10,7 @@
 //   pub left: Option<Rc<RefCell<TreeNode>>>,
 //   pub right: Option<Rc<RefCell<TreeNode>>>,
 // }
-// 
+//
 // impl TreeNode {
 //   #[inline]
 //   pub fn new(val: i32) -> Self {
@@ -21,9 +21,9 @@
 //     }
 //   }
 // }
-use std::rc::Rc;
-use std::cell::RefCell;
 use crate::TreeNode;
+use std::cell::RefCell;
+use std::rc::Rc;
 impl Solution {
     pub fn convert_bst(root: Option<Rc<RefCell<TreeNode>>>) -> Option<Rc<RefCell<TreeNode>>> {
         let mut sum = 0;
@@ -50,9 +50,6 @@ mod test {
 
     #[test]
     fn convert_bst() {
-        assert_eq!(
-            btree![18, 20, 13],
-            Solution::convert_bst(btree![5, 2, 13])
-        );
+        assert_eq!(btree![18, 20, 13], Solution::convert_bst(btree![5, 2, 13]));
     }
 }

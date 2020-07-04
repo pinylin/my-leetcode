@@ -37,6 +37,14 @@ mod test {
     use super::Solution;
     #[test]
     fn it_works() {
-        assert_eq!(Solution::find_words(vec!["Hello".to_owned(), "Alaska".to_owned(), "Dad".to_owned(), "Peace".to_owned()]), vec!["Alaska".to_owned(), "Dad".to_owned()]);
+        assert_eq!(
+            Solution::find_words(vec![
+                "Hello".to_owned(),
+                "Alaska".to_owned(),
+                "Dad".to_owned(),
+                "Peace".to_owned()
+            ]),
+            vec!["Alaska".to_owned(), "Dad".to_owned()]
+        );
     }
 }

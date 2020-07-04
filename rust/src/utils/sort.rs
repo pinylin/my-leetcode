@@ -1,6 +1,6 @@
 use leetcode_prelude::TreeNode;
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 pub fn merge_sort(a: &mut Vec<i32>, b: usize, e: usize) {
     if b < e {
@@ -32,7 +32,7 @@ fn merge(a: &mut Vec<i32>, b: usize, m: usize, e: usize) {
     }
 }
 
-pub struct Sort{}
+pub struct Sort {}
 impl Sort {
     pub fn inorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         if root.is_none() {

@@ -17,7 +17,7 @@ impl Solution {
             if j < nums.len() && nums[j] - nums[i] == k {
                 res += 1;
             }
-            while i < nums.len() -1 && nums[i] == nums[i + 1] {
+            while i < nums.len() - 1 && nums[i] == nums[i + 1] {
                 i += 1;
             }
             i += 1;
@@ -25,7 +25,6 @@ impl Solution {
         res
     }
 }
-
 
 pub struct Solution;
 
@@ -35,9 +34,6 @@ mod test {
     use super::Solution;
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::find_pairs(vec![3, 1, 4, 1, 5], 2),
-            2
-        );
+        assert_eq!(Solution::find_pairs(vec![3, 1, 4, 1, 5], 2), 2);
     }
 }

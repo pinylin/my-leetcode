@@ -86,12 +86,12 @@ impl Solution {
             match pair {
                 (Some(left), Some(right)) => {
                     if i32::abs(left - right) < 2 {
-                        return Some(i32::max(left, right) + 1);
+                        Some(i32::max(left, right) + 1)
                     } else {
-                        return None;
+                        None
                     }
                 }
-                _ => return None,
+                _ => None,
             }
         } else {
             Some(0)

@@ -175,3 +175,7 @@ pub mod s530_minimum_difference;
 pub mod s532_diff_pairs_in_array;
 
 pub mod s538_convert_bst_greater_tree;
+
+pub mod s541_reverse_string_ii;
+
+pub mod s1463_cherry_pick_ii;
