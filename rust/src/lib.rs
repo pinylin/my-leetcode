@@ -18,6 +18,7 @@ pub mod s027;
 pub mod s028;
 
 pub mod s035;
+pub mod s036_valid_sudoku;
 
 pub mod s038;
 
