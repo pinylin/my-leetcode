@@ -1,7 +1,7 @@
 #![feature(test)]
 #![feature(proc_macro_hygiene)]
 
-pub use leetcode_prelude::{btree, linkedlist, ListNode, TreeNode};
+pub use leetcode_prelude::{linkedlist, btree, leetcode_test, vec_string, ListNode, TreeNode, assert_eq_sorted};
 pub mod utils;
 
 pub mod s001;
@@ -10,8 +10,11 @@ pub mod s003;
 pub mod s004;
 pub mod s005;
 
+pub mod s018_4sum;
+pub mod s019_remove_nth_node_from_end_of_list;
 pub mod s020;
 pub mod s021;
+pub mod s022_generate_parentheses;
 
 pub mod s026;
 pub mod s027;
