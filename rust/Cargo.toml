@@ -5,4 +5,4 @@ authors = ["pinylin <pinglinvip@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-leetcode_prelude = "^0.1"
+leetcode_prelude = "^0.2"

@@ -55,9 +55,9 @@ impl Solution {
             while let Some(next) = cur.next.as_mut() {
                 if cur.val != next.val {
                     break;
-                }
+                };
                 let next_next = std::mem::replace(&mut next.next, None);
-                std::mem::replace(&mut cur.next, next_next);
+                let _ = std::mem::replace(&mut cur.next, next_next);
             }
             p = &mut cur.next;
         }
