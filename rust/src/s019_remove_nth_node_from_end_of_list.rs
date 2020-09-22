@@ -11,7 +11,7 @@
 //   pub val: i32,
 //   pub next: Option<Box<ListNode>>
 // }
-// 
+//
 // impl ListNode {
 //   #[inline]
 //   fn new(val: i32) -> Self {
@@ -38,7 +38,9 @@ impl Solution {
         }
         let a = slow as *const _ as *mut Option<Box<ListNode>>;
         let b = &slow.as_ref().unwrap().next as *const _ as *mut Option<Box<ListNode>>;
-        unsafe { std::ptr::swap(a, b); }
+        unsafe {
+            std::ptr::swap(a, b);
+        }
         dummy.unwrap().next
     }
 }

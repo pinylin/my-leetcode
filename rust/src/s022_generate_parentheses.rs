@@ -31,7 +31,6 @@ impl Solution {
 }
 // @lc code=end
 
-
 impl Solution {
     // 和这个大佬说的dp很像
     // https://leetcode.com/problems/generate-parentheses/discuss/209410/c%2B%2B-dynamic-programming-(0ms)
@@ -85,8 +84,8 @@ mod tests {
 #[cfg(test)]
 mod bench {
     extern crate test;
-    use super::Solution;
     use self::test::Bencher;
+    use super::Solution;
 
     #[bench]
     fn recursion(b: &mut Bencher) {
