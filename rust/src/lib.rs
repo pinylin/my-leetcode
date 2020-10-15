@@ -1,7 +1,9 @@
 #![feature(test)]
 #![feature(proc_macro_hygiene)]
 
-pub use leetcode_prelude::{linkedlist, btree, leetcode_test, vec_string, ListNode, TreeNode, assert_eq_sorted};
+pub use leetcode_prelude::{
+    assert_eq_sorted, btree, leetcode_test, linkedlist, vec_string, ListNode, TreeNode,
+};
 pub mod utils;
 
 pub mod s001;
@@ -107,6 +109,7 @@ pub mod s290_word_pattern;
 
 pub mod s292_nim_game;
 
+pub mod s345_reverse_vowels_of_a_string;
 pub mod s349_intersection_of_two_arrays;
 pub mod s350_intersection_of_two_arrays_ii;
 
