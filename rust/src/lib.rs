@@ -72,6 +72,8 @@ pub mod s169;
 pub mod s171;
 pub mod s172;
 
+pub mod s179_largest_number;
+
 pub mod s189;
 
 pub mod s198;
