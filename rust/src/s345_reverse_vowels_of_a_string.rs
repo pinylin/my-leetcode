@@ -36,7 +36,6 @@ impl Solution {
 }
 // @lc code=end
 
-
 pub struct Solution;
 
 #[cfg(test)]

@@ -7,7 +7,6 @@
 // @lc code=start
 use std::collections::HashSet;
 impl Solution {
-    
     pub fn intersection(nums1: Vec<i32>, nums2: Vec<i32>) -> Vec<i32> {
         let mut iset = HashSet::new();
         let mut uset = HashSet::new();
@@ -30,16 +29,26 @@ impl Solution {
         let mut i = 0;
         let mut j = 0;
         while i < nums1.len() && j < nums2.len() {
-            if nums1[i] > nums2[j] { j += 1; continue; }
-            if nums1[i] == nums2[j] { nums.push(nums1[i]); i += 1; j += 1; continue; }
-            if nums1[i] < nums2[j] { i += 1; continue; }
+            if nums1[i] > nums2[j] {
+                j += 1;
+                continue;
+            }
+            if nums1[i] == nums2[j] {
+                nums.push(nums1[i]);
+                i += 1;
+                j += 1;
+                continue;
+            }
+            if nums1[i] < nums2[j] {
+                i += 1;
+                continue;
+            }
         }
         nums.dedup();
         nums
     }
 }
 // @lc code=end
-
 
 pub struct Solution;
 
@@ -49,7 +58,13 @@ mod test {
     use super::Solution;
     #[test]
     fn it_works() {
-        assert_eq!(Solution::intersection(vec![1,2,2,1], vec![2,2]), vec![2]);
-        assert_eq!(Solution::intersection_sort(vec![1,2,2,1], vec![2,2]), vec![2]);
+        assert_eq!(
+            Solution::intersection(vec![1, 2, 2, 1], vec![2, 2]),
+            vec![2]
+        );
+        assert_eq!(
+            Solution::intersection_sort(vec![1, 2, 2, 1], vec![2, 2]),
+            vec![2]
+        );
     }
 }

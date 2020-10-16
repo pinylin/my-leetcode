@@ -115,6 +115,9 @@ pub mod s345_reverse_vowels_of_a_string;
 pub mod s349_intersection_of_two_arrays;
 pub mod s350_intersection_of_two_arrays_ii;
 
+pub mod s352_summary_ranges;
+pub mod s354_max_envelpoes;
+
 pub mod s367_valid_perfect_square;
 
 pub mod s383_ransom_note;

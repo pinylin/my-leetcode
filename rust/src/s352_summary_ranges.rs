@@ -12,20 +12,18 @@ struct SummaryRanges {
     seen: HashSet<i32>,
 }
 
-
-/** 
+/**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 impl SummaryRanges {
-
     /** Initialize your data structure here. */
     fn new() -> Self {
         let data = BTreeMap::new();
         let seen = HashSet::new();
         SummaryRanges { data, seen }
     }
-    
+
     fn add_num(&mut self, val: i32) {
         if !self.seen.insert(val) {
             return;
@@ -48,7 +46,7 @@ impl SummaryRanges {
         }
         self.data.insert(l, r);
     }
-    
+
     fn get_intervals(&self) -> Vec<Vec<i32>> {
         self.data.iter().map(|(&k, &v)| vec![k, v]).collect()
     }
@@ -62,3 +60,17 @@ impl SummaryRanges {
  */
 // @lc code=end
 
+#[cfg(test)]
+mod test {
+    use super::SummaryRanges;
+    #[test]
+    fn it_works() {
+        let mut obj = SummaryRanges::new();
+        obj.add_num(1);
+        obj.add_num(3);
+        obj.add_num(7);
+        obj.add_num(2);
+        obj.add_num(6);
+        assert_eq!(obj.get_intervals(), vec![vec![1, 3], vec![6, 7]]);
+    }
+}
