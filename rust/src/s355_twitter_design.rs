@@ -6,7 +6,7 @@ refer: https://github.com/gwy15/leetcode/blob/d2a8969946848a56826299303b9999dbf9
  */
 
 // @lc code=start
-use std::collections::{HashMap, HashSet, BinaryHeap};
+use std::collections::{BinaryHeap, HashMap, HashSet};
 
 type User = i32;
 // t, id
@@ -18,12 +18,11 @@ struct Twitter {
     follows: HashMap<User, HashSet<User>>,
 }
 
-
-/** 
+/**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
- impl Twitter {
+impl Twitter {
     /** Initialize your data structure here. */
     fn new() -> Self {
         Twitter {
@@ -124,36 +123,64 @@ mod tests {
     #[test]
     fn test_twitter() {
         let mut obj = Twitter::new();
-        obj.post_tweet(1,5);
+        obj.post_tweet(1, 5);
         assert_eq!(vec![5], obj.get_news_feed(1));
-        obj.follow(1,2);
-        obj.post_tweet(2,6);
-        assert_eq!(vec![6,5], obj.get_news_feed(1));
-        obj.unfollow(1,2);
+        obj.follow(1, 2);
+        obj.post_tweet(2, 6);
+        assert_eq!(vec![6, 5], obj.get_news_feed(1));
+        obj.unfollow(1, 2);
         assert_eq!(vec![5], obj.get_news_feed(1));
         assert_eq!(vec![6], obj.get_news_feed(2));
         assert_eq!(obj.get_news_feed(3), vec![]);
-        obj.follow(2,1);
-        assert_eq!(vec![6,5], obj.get_news_feed(2));
-        obj.post_tweet(2,7);
-        assert_eq!(vec![7,6,5], obj.get_news_feed(2));
+        obj.follow(2, 1);
+        assert_eq!(vec![6, 5], obj.get_news_feed(2));
+        obj.post_tweet(2, 7);
+        assert_eq!(vec![7, 6, 5], obj.get_news_feed(2));
         assert_eq!(vec![5], obj.get_news_feed(1));
 
         {
             let mut obj = Twitter::new();
-            let posts = vec![(1,5),(1,3),(1,101),(1,13),(1,10),(1,2),(1,94),(1,505),(1,333)];
-            for (uid,tid) in posts {
+            let posts = vec![
+                (1, 5),
+                (1, 3),
+                (1, 101),
+                (1, 13),
+                (1, 10),
+                (1, 2),
+                (1, 94),
+                (1, 505),
+                (1, 333),
+            ];
+            for (uid, tid) in posts {
                 obj.post_tweet(uid, tid);
             }
-            assert_eq!(vec![333,505,94,2,10,13,101,3,5], obj.get_news_feed(1));
+            assert_eq!(
+                vec![333, 505, 94, 2, 10, 13, 101, 3, 5],
+                obj.get_news_feed(1)
+            );
         }
         {
-            let posts = vec![(1,5),(1,3),(1,101),(1,13),(1,10),(1,2),(1,94),(1,505),(1,333),(1,22),(1,11)];
+            let posts = vec![
+                (1, 5),
+                (1, 3),
+                (1, 101),
+                (1, 13),
+                (1, 10),
+                (1, 2),
+                (1, 94),
+                (1, 505),
+                (1, 333),
+                (1, 22),
+                (1, 11),
+            ];
             let mut obj = Twitter::new();
-            for (uid,tid) in posts {
+            for (uid, tid) in posts {
                 obj.post_tweet(uid, tid);
             }
-            assert_eq!(vec![11,22,333,505,94,2,10,13,101,3], obj.get_news_feed(1));
+            assert_eq!(
+                vec![11, 22, 333, 505, 94, 2, 10, 13, 101, 3],
+                obj.get_news_feed(1)
+            );
         }
     }
 }
