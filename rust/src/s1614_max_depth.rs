@@ -12,8 +12,10 @@ impl Solution {
         for item in s.chars() {
             match item {
                 '(' => vec.push("("),
-                ')' => {vec.pop();},
-                _ => {},
+                ')' => {
+                    vec.pop();
+                }
+                _ => {}
             }
             depth = depth.max(vec.len());
         }
@@ -22,3 +24,4 @@ impl Solution {
 }
 // @lc code=end
 
+pub struct Solution;

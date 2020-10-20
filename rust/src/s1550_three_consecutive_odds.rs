@@ -30,10 +30,6 @@ mod test {
     // use crate::utils::vec2d;
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::three_consecutive_odds(vec![5, 4, 3, 2, 1]),
-            false
-        );
-        
+        assert_eq!(Solution::three_consecutive_odds(vec![5, 4, 3, 2, 1]), false);
     }
 }
