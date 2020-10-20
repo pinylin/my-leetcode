@@ -196,6 +196,8 @@ pub mod s1463_cherry_pick_ii;
 
 pub mod s1550_three_consecutive_odds;
 
+pub mod s1592_reorder_spaces;
+
 pub mod s1598_min_operations;
 
 pub mod s1603_parking_system;
