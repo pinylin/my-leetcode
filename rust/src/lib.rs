@@ -196,6 +196,8 @@ pub mod s1463_cherry_pick_ii;
 
 pub mod s1550_three_consecutive_odds;
 
+pub mod s1576_modify_string;
+
 pub mod s1582_num_special;
 
 pub mod s1588_sum_odd_length_subarrays;
