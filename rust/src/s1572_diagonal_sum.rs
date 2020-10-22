@@ -14,9 +14,10 @@ impl Solution {
             res += mat[rn - i - 1][i];
         }
         if rn % 2 != 0 {
-            let mid = 1.max(rn - 2);
+            let mid = rn / 2;
             res -= mat[mid][mid];
         }
+
         res
     }
 }
