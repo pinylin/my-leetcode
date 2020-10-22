@@ -34,6 +34,9 @@ mod test {
     // use crate::utils::vec2d;
     #[test]
     fn it_works() {
-        assert_eq!(Solution::modify_string("?abc".to_owned()), "babc".to_owned());
+        assert_eq!(
+            Solution::modify_string("?abc".to_owned()),
+            "babc".to_owned()
+        );
     }
 }
