@@ -196,6 +196,10 @@ pub mod s1463_cherry_pick_ii;
 
 pub mod s1550_three_consecutive_odds;
 
+pub mod s1556_thousand_separator;
+
+pub mod s1560_most_visited;
+
 pub mod s1566_contains_pattern;
 
 pub mod s1572_diagonal_sum;

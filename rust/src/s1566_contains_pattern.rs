@@ -8,7 +8,8 @@
 impl Solution {
     pub fn contains_pattern(arr: Vec<i32>, m: i32, k: i32) -> bool {
         let (m, k) = (m as usize, k as usize);
-        arr.windows(m * k).any(|window| window.chunks(m).all(|chunk| chunk == &window[0..m]))
+        arr.windows(m * k)
+            .any(|window| window.chunks(m).all(|chunk| chunk == &window[0..m]))
     }
 }
 // @lc code=end
@@ -21,16 +22,13 @@ mod test {
     #[test]
     fn it_works() {
         assert_eq!(
-            Solution::contains_pattern(vec![1,2,4,4,4,4], 1, 3),
+            Solution::contains_pattern(vec![1, 2, 4, 4, 4, 4], 1, 3),
             true
         );
         assert_eq!(
-            Solution::contains_pattern(vec![1,2,1,2,1,1,1,3], 2, 2),
+            Solution::contains_pattern(vec![1, 2, 1, 2, 1, 1, 1, 3], 2, 2),
             true
         );
-        assert_eq!(
-            Solution::contains_pattern(vec![1,2,3,1,2], 2, 2),
-            false
-        );
+        assert_eq!(Solution::contains_pattern(vec![1, 2, 3, 1, 2], 2, 2), false);
     }
 }
