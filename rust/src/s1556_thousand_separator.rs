@@ -23,9 +23,6 @@ mod test {
     // use crate::utils::vec2d;
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::thousand_separator(3893),
-            "3.893".to_owned()
-        );
+        assert_eq!(Solution::thousand_separator(3893), "3.893".to_owned());
     }
 }

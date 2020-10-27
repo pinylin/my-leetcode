@@ -12,8 +12,7 @@ impl Solution {
         for c in s.chars() {
             if stack.len() > 0 && (c as i32 - stack[stack.len() - 1] as i32).abs() == 32 {
                 stack.pop();
-            }
-            else {
+            } else {
                 stack.push(c);
             }
         }
