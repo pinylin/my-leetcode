@@ -194,6 +194,8 @@ pub mod s541_reverse_string_ii;
 
 pub mod s1463_cherry_pick_ii;
 
+pub mod s1544_make_good;
+
 pub mod s1550_three_consecutive_odds;
 
 pub mod s1556_thousand_separator;
