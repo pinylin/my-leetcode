@@ -27,7 +27,6 @@ mod test {
     // use crate::utils::vec2d;
     #[test]
     fn it_works() {
-        assert_eq!(Solution::num_identical_pairs(vec![1,1,1,1]), 6);
+        assert_eq!(Solution::num_identical_pairs(vec![1, 1, 1, 1]), 6);
     }
 }
-
