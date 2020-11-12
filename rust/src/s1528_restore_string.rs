@@ -14,7 +14,10 @@ impl Solution {
         // }
         // arr.into_iter().collect()
 
-        indices.iter().zip(s.chars()).for_each(|(&x, ch)| arr[x as usize] = ch);
+        indices
+            .iter()
+            .zip(s.chars())
+            .for_each(|(&x, ch)| arr[x as usize] = ch);
         arr.into_iter().collect()
     }
 }

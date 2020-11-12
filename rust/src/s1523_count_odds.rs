@@ -9,10 +9,10 @@ impl Solution {
     pub fn count_odds(low: i32, high: i32) -> i32 {
         let mut res = 0;
 
-        if low % 2 ==1 || high %2 == 1 {
+        if low % 2 == 1 || high % 2 == 1 {
             res = 1;
         }
-        res + (high-low)/2
+        res + (high - low) / 2
     }
 }
 // @lc code=end
@@ -24,9 +24,6 @@ mod test {
     // use crate::utils::vec2d;
     #[test]
     fn it_works() {
-        assert_eq!(
-            Solution::count_odds(3, 7),
-            3
-        );
+        assert_eq!(Solution::count_odds(3, 7), 3);
     }
 }
