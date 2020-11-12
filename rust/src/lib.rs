@@ -194,6 +194,8 @@ pub mod s541_reverse_string_ii;
 
 pub mod s1463_cherry_pick_ii;
 
+pub mod s1502_can_make_arithmetic_progression;
+
 pub mod s1507_reformat_date;
 
 pub mod s1512_num_identical_pairs;
