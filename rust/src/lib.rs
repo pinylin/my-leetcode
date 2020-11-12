@@ -194,6 +194,8 @@ pub mod s541_reverse_string_ii;
 
 pub mod s1463_cherry_pick_ii;
 
+pub mod s1523_count_odds;
+
 pub mod s1528_restore_string;
 
 pub mod s1534_count_good_triplets;
