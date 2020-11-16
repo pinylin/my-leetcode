@@ -192,7 +192,10 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1460_arr_can_be_equal;
+
 pub mod s1463_cherry_pick_ii;
+pub mod s1464_max_product;
 
 pub mod s1470_shuffle_arr;
 
