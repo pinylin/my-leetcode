@@ -192,6 +192,8 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1455_is_prefix_of_word;
+
 pub mod s1460_arr_can_be_equal;
 
 pub mod s1463_cherry_pick_ii;
