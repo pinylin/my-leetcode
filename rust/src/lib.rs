@@ -194,6 +194,12 @@ pub mod s541_reverse_string_ii;
 
 pub mod s1463_cherry_pick_ii;
 
+pub mod s1470_shuffle_arr;
+
+pub mod s1475_final_prices;
+
+pub mod s1480_running_sum;
+
 pub mod s1486_xor_operation;
 
 pub mod s1491_average_salary;
