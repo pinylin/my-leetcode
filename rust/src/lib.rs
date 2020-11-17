@@ -192,6 +192,8 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1446_max_power;
+
 pub mod s1450_busy_student;
 
 pub mod s1455_is_prefix_of_word;
