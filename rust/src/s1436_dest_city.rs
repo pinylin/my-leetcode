@@ -7,7 +7,7 @@
 // @lc code=start
 impl Solution {
     pub fn dest_city(paths: Vec<Vec<String>>) -> String {
-        let sets: std::collections::HashSet<&String> = paths.iter().map(|x|{&x[0]}).collect();
+        let sets: std::collections::HashSet<&String> = paths.iter().map(|x| &x[0]).collect();
         paths.iter().find(|x| !sets.contains(&x[1])).unwrap()[1].clone()
     }
 }
