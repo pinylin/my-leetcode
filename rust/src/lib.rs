@@ -192,6 +192,10 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1417_reformat_string;
+
+pub mod s1422_max_score_split_string;
+
 pub mod s1431_kids_with_candies;
 
 pub mod s1436_dest_city;
