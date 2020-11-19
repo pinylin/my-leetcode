@@ -27,7 +27,6 @@ pub struct Solution;
 #[cfg(test)]
 mod test {
     use super::Solution;
-    // use crate::utils::vec2d;
     #[test]
     fn it_works() {
         assert_eq!(Solution::min_start_value(vec![-3, 2, -3, 4, 2]), 5);

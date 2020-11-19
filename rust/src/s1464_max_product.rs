@@ -17,7 +17,7 @@ pub struct Solution;
 #[cfg(test)]
 mod test {
     use super::Solution;
-    // use crate::utils::vec2d;
+
     #[test]
     fn it_works() {
         assert_eq!(Solution::max_product(vec![1, 5, 4, 5]), 16)

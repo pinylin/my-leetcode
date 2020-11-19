@@ -23,7 +23,7 @@ pub struct Solution;
 #[cfg(test)]
 mod test {
     use super::Solution;
-    // use crate::utils::vec2d;
+
     #[test]
     fn it_works() {
         assert_eq!(Solution::most_visited(4, vec![1, 3, 1, 2]), vec![1, 2]);

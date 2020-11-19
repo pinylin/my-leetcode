@@ -23,7 +23,7 @@ pub struct Solution;
 #[cfg(test)]
 mod test {
     use super::Solution;
-    // use crate::utils::vec2d;
+
     #[test]
     fn it_works() {
         assert_eq!(Solution::num_water_bottles(15, 4), 19);

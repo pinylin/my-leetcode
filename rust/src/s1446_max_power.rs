@@ -25,7 +25,7 @@ pub struct Solution;
 #[cfg(test)]
 mod test {
     use super::Solution;
-    // use crate::utils::vec2d;
+
     #[test]
     fn it_works() {
         assert_eq!(Solution::max_power("hooraaaaaaaaaaay".to_owned()), 11);

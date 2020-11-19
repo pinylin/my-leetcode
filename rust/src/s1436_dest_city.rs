@@ -17,7 +17,7 @@ pub struct Solution;
 mod test {
     use super::Solution;
     use crate::vec_string;
-    // use crate::utils::vec2d;
+
     #[test]
     fn it_works() {
         assert_eq!(

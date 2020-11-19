@@ -22,7 +22,7 @@ pub struct Solution;
 #[cfg(test)]
 mod test {
     use super::Solution;
-    // use crate::utils::vec2d;
+
     #[test]
     fn it_works() {
         assert_eq!(Solution::final_prices(vec![10, 1, 1, 6]), vec![9, 0, 1, 6])

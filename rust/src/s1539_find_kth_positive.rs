@@ -25,7 +25,7 @@ pub struct Solution;
 #[cfg(test)]
 mod test {
     use super::Solution;
-    // use crate::utils::vec2d;
+
     #[test]
     fn it_works() {
         assert_eq!(Solution::find_kth_positive(vec![2, 3, 4, 7, 11], 5), 9);

@@ -29,7 +29,7 @@ pub struct Solution;
 #[cfg(test)]
 mod test {
     use super::Solution;
-    // use crate::utils::vec2d;
+
     #[test]
     fn it_works() {
         assert_eq!(Solution::running_sum(vec![1, 2, 3, 4]), vec![1, 3, 6, 10])
