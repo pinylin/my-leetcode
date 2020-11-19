@@ -14,7 +14,7 @@ impl Solution {
         for (i, w) in words.iter().enumerate() {
             for j in i + 1..words.len() {
                 if words[j].contains(w) {
-                    set.insert(w.to_string());
+                    set.insert(w.clone());
                 }
             }
         }
