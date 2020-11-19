@@ -12,7 +12,7 @@ impl Solution {
         if word_count == 0 {
             return text;
         }
-        let mut white_count = text.matches(" ").count() as i32;
+        let mut white_count = text.matches(' ').count() as i32;
         if white_count == 0 {
             return text;
         }
@@ -43,6 +43,7 @@ impl Solution {
 // @lc code=end
 
 pub struct Solution;
+#[cfg(test)]
 mod test {
     use super::Solution;
     #[test]

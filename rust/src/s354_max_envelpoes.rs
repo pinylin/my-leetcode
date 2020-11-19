@@ -40,7 +40,6 @@ pub struct Solution;
 #[cfg(test)]
 mod test {
     use super::Solution;
-    
     #[test]
     fn it_works() {
         macro_rules! test {

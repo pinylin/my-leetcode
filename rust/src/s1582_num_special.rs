@@ -31,6 +31,7 @@ impl Solution {
 // @lc code=end
 
 pub struct Solution;
+#[cfg(test)]
 mod test {
     use super::Solution;
     #[test]

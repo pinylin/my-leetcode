@@ -192,6 +192,8 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1399_count_largest_group;
+
 pub mod s1403_min_subsequence_in_arr;
 
 pub mod s1408_string_matching_in_an_array;
