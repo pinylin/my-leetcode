@@ -192,6 +192,8 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1385_find_the_distance_value_of_two_arr;
+
 pub mod s1389_create_target_array;
 
 pub mod s1394_find_lucky_in_arr;
