@@ -7,6 +7,7 @@
 // @lc code=start
 impl Solution {
     pub fn find_the_distance_value(arr1: Vec<i32>, arr2: Vec<i32>, d: i32) -> i32 {
+        // refer: https://github.com/ruislan/leetcode/blob/66ed662b51bd348ccd08e3003ff5ee3b3de476b3/src/q/q1385.rs
         // 方法1
         // 迭代数组arr1，迭代数组arr2，如果不存在|arr1[i] - arr2[j]| <= d，计数加1
         // 返回计数值
