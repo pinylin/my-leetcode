@@ -82,13 +82,23 @@ mod bench {
     fn add_binary(b: &mut Bencher) {
         b.iter(|| Solution::sort_by_bits(vec![0, 1, 2, 3, 4, 5, 6, 7, 8]));
         b.iter(|| Solution::sort_by_bits(vec![1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1]));
-        b.iter(|| Solution::sort_by_bits(vec![1111,7644,1107,6978,8742,1,7403,7694,9193,4401,377,8641,5311,624,3554,6631]));
+        b.iter(|| {
+            Solution::sort_by_bits(vec![
+                1111, 7644, 1107, 6978, 8742, 1, 7403, 7694, 9193, 4401, 377, 8641, 5311, 624,
+                3554, 6631,
+            ])
+        });
     }
 
     #[bench]
     fn add_binary_2(b: &mut Bencher) {
         b.iter(|| Solution::sort_by_bits_2(vec![0, 1, 2, 3, 4, 5, 6, 7, 8]));
         b.iter(|| Solution::sort_by_bits_2(vec![1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1]));
-        b.iter(|| Solution::sort_by_bits_2(vec![1111,7644,1107,6978,8742,1,7403,7694,9193,4401,377,8641,5311,624,3554,6631]));
+        b.iter(|| {
+            Solution::sort_by_bits_2(vec![
+                1111, 7644, 1107, 6978, 8742, 1, 7403, 7694, 9193, 4401, 377, 8641, 5311, 624,
+                3554, 6631,
+            ])
+        });
     }
 }
