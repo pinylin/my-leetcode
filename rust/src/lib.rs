@@ -192,6 +192,10 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1356_sort_by_bits;
+
+pub mod s1360_days_between_dates;
+
 pub mod s1365_smaller_numbers_than_current;
 
 pub mod s1370_increasing_decreasing_string;
