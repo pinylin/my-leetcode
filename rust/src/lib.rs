@@ -192,6 +192,10 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1337_k_weakest_rows;
+
+pub mod s1342_number_of_steps;
+
 pub mod s1346_check_if_double_exist;
 
 pub mod s1351_count_negatives;
