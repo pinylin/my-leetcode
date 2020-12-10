@@ -192,6 +192,7 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1331_array_rank_transform;
 pub mod s1332_remove_palindrome_sub;
 
 pub mod s1337_k_weakest_rows;
