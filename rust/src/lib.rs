@@ -192,6 +192,10 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1304_sum_of_n_nums_is_zero;
+
+pub mod s1309_freq_alphabets;
+
 pub mod s1313_decompress_rl_elist;
 
 pub mod s1317_get_no_zero_integers;
