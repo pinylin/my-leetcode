@@ -192,6 +192,8 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1299_replace_elements_by_right_max;
+
 pub mod s1304_sum_of_n_nums_is_zero;
 
 pub mod s1309_freq_alphabets;
