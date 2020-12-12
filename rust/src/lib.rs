@@ -192,6 +192,8 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1252_odd_cells;
+
 pub mod s1266_min_time_to_visit_all_points;
 
 pub mod s1275_tictactoe;
