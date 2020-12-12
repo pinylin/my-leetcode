@@ -37,7 +37,7 @@ mod test {
         );
         assert_eq!(
             Solution::string_matching(vec_string!["mass", "as", "hero", "superhero"]),
-            vec_string!["as", "hero"]
+            vec_string!["hero", "as"]
         );
     }
 }

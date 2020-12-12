@@ -26,7 +26,7 @@ mod test {
     #[test]
     fn it_works() {
         assert_eq!(Solution::get_no_zero_integers(2), vec![1, 1]);
-        assert_eq!(Solution::get_no_zero_integers(11), vec![2, 10]);
+        assert_eq!(Solution::get_no_zero_integers(11), vec![2, 9]);
         assert_eq!(Solution::get_no_zero_integers(10000), vec![1, 9999]);
     }
 }
