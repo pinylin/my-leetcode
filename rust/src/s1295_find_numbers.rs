@@ -11,7 +11,9 @@ impl Solution {
             .fold(0, |acc, x| acc + (x.to_string().len() as i32 + 1) % 2)
 
         // 方法2
-        // nums.iter().filter(|&&x| ((x as f32).log10() as i32 + 1) % 2 == 0).count() as i32
+        // nums.iter()
+        //     .filter(|&&x| ((x as f32).log10() as i32 + 1) % 2 == 0)
+        //     .count() as i32
     }
 }
 // @lc code=end
