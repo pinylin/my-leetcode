@@ -192,6 +192,8 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1290_get_decimal_value;
+
 pub mod s1295_find_numbers;
 
 pub mod s1299_replace_elements_by_right_max;
