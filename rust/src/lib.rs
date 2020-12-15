@@ -192,6 +192,10 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1221_balanced_string_split;
+
+pub mod s1232_check_straight_line;
+
 pub mod s1237_find_solution;
 
 pub mod s1252_odd_cells;
