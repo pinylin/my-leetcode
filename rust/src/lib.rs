@@ -192,6 +192,8 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1207_unique_occurrences;
+
 pub mod s1217_min_cost_to_move_chips;
 
 pub mod s1221_balanced_string_split;
