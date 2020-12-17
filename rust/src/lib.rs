@@ -192,6 +192,8 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1175_num_prime_arrangements;
+
 pub mod s1184_distance_between_bus_stops;
 pub mod s1185_day_of_the_week;
 

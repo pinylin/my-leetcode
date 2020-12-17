@@ -1,27 +1,10 @@
 /*
- * @lc app=leetcode id=204 lang=rust
+ * @lc app=leetcode.cn id=204 lang=rust
  *
- * [204] Count Primes
- *
- * https://leetcode.com/problems/count-primes/description/
- *
- * algorithms
- * Easy (28.30%)
- * Total Accepted:    226.4K
- * Total Submissions: 789.9K
- * Testcase Example:  '10'
- *
- * Count the number of prime numbers less than a non-negative number, n.
- *
- * Example:
- *
- *
- * Input: 10
- * Output: 4
- * Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.
- *
- *
+ * [204] 计数质数
  */
+
+// @lc code=start
 impl Solution {
     pub fn count_primes(n: i32) -> i32 {
         if n < 3 {
@@ -38,7 +21,7 @@ impl Solution {
         nums.into_iter().filter(|&x| x).count() as i32 - 2
     }
 }
-
+// @lc code=end
 pub struct Solution;
 
 #[cfg(test)]
