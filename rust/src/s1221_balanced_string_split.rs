@@ -12,7 +12,7 @@ impl Solution {
             match x {
                 'L' => count += 1,
                 'R' => count -= 1,
-                _ => {}
+                _ => (),
             }
             if count == 0 {
                 res += 1;
@@ -25,7 +25,7 @@ impl Solution {
         //     match ch {
         //         'L' => count += 1,
         //         'R' => count -= 1,
-        //         _ => {}
+        //         _ => ()
         //     }
         //     if count == 0 {
         //         res += 1;

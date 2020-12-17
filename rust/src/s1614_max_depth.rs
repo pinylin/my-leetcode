@@ -15,7 +15,7 @@ impl Solution {
                 ')' => {
                     vec.pop();
                 }
-                _ => {}
+                _ => (),
             }
             depth = depth.max(vec.len());
         }

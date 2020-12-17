@@ -192,6 +192,8 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1189_max_number_of_balloons;
+
 pub mod s1200_minimum_abs_difference;
 
 pub mod s1207_unique_occurrences;

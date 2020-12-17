@@ -27,7 +27,7 @@ impl Solution {
             res += 1;
         }
     }
-    //  41 ns/iter (+/- 4) 
+    //  41 ns/iter (+/- 4)
     pub fn max_number_of_balloons_2(text: String) -> i32 {
         let mut word = vec![0; 5];
         for ch in text.chars() {

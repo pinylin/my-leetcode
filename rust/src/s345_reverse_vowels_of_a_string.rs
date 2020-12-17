@@ -16,7 +16,7 @@ impl Solution {
         for (index, ch) in chars.iter().enumerate() {
             match ch {
                 'a' | 'e' | 'i' | 'o' | 'u' | 'A' | 'E' | 'I' | 'O' | 'U' => indexes.push(index),
-                _ => {}
+                _ => (),
             }
         }
 
