@@ -15,7 +15,7 @@ impl Solution {
             if diff < min {
                 min = diff;
                 res.clear();
-            } 
+            }
             if diff == min {
                 res.push(vec![arr[i - 1], arr[i]]);
             }
@@ -46,9 +46,18 @@ mod test {
     use super::Solution;
     #[test]
     fn it_works() {
-        assert_eq!(Solution::minimum_abs_difference(vec![4, 2, 1, 3]), vec![vec![1, 2], vec![2, 3], vec![3, 4]]);
-        assert_eq!(Solution::minimum_abs_difference(vec![1, 3, 6, 10, 15]), vec![vec![1, 3]]);
-        assert_eq!(Solution::minimum_abs_difference(vec![3, 8, -10, 23, 19, -4, -14, 27]), vec![vec![-14, -10], vec![19, 23], vec![23, 27]]);
+        assert_eq!(
+            Solution::minimum_abs_difference(vec![4, 2, 1, 3]),
+            vec![vec![1, 2], vec![2, 3], vec![3, 4]]
+        );
+        assert_eq!(
+            Solution::minimum_abs_difference(vec![1, 3, 6, 10, 15]),
+            vec![vec![1, 3]]
+        );
+        assert_eq!(
+            Solution::minimum_abs_difference(vec![3, 8, -10, 23, 19, -4, -14, 27]),
+            vec![vec![-14, -10], vec![19, 23], vec![23, 27]]
+        );
     }
 }
 
@@ -66,7 +75,7 @@ mod bench {
     }
 
     #[bench]
-    fn new_vec (b: &mut Bencher) {
+    fn new_vec(b: &mut Bencher) {
         b.iter(|| Solution::minimum_abs_difference_2(vec![4, 2, 1, 3]));
         b.iter(|| Solution::minimum_abs_difference_2(vec![1, 3, 6, 10, 15]));
         b.iter(|| Solution::minimum_abs_difference_2(vec![3, 8, -10, 23, 19, -4, -14, 27]));
