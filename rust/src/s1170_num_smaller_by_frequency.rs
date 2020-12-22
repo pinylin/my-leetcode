@@ -3,8 +3,8 @@
  *
  * [1170] 比较字符串最小字母出现频次
  */
-// 
-// refer: https://github.com/leshow/exercism/blob/add43ff577246f318d0218b4a36d86c3236c730b/hackerrank/src/compare_strings_by_freq_of_smallest_char.rs 
+//
+// refer: https://github.com/leshow/exercism/blob/add43ff577246f318d0218b4a36d86c3236c730b/hackerrank/src/compare_strings_by_freq_of_smallest_char.rs
 // @lc code=start
 impl Solution {
     pub fn num_smaller_by_frequency(queries: Vec<String>, words: Vec<String>) -> Vec<i32> {
