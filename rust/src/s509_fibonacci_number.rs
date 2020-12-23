@@ -15,7 +15,7 @@ impl Solution {
             1 => 1,
             n => {
                 Solution::memoize(cache, Solution::fib_memo, n - 1)
-                    + Solution::memoize(cache, Solution::fib_memo, arg - 2)
+                    + Solution::memoize(cache, Solution::fib_memo, n - 2)
             }
         }
     }
