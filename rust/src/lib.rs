@@ -192,6 +192,8 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s1128_num_equiv_domino_pairs;
+
 pub mod s1137_tribonacci;
 
 pub mod s1154_day_of_year;
