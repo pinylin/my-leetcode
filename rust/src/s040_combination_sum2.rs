@@ -45,7 +45,7 @@ impl Solution {
             Self::dfs(candidates, new_target, i + 1, result, path);
             path.pop();
         }
-    } 
+    }
 
     pub fn combination_sum2_recursion(mut candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
         candidates.sort_unstable();
@@ -65,7 +65,7 @@ impl Solution {
                 all.insert(vec![c]);
                 continue;
             }
-            let partial = Solution::find_target(&candidates[i + 1..], target - c);
+            let partial = Self::find_target(&candidates[i + 1..], target - c);
             for v in partial.into_iter() {
                 let mut v = v.clone();
                 v.push(c);

@@ -30,6 +30,8 @@ pub mod s038;
 pub mod s039_combination_sum;
 pub mod s040_combination_sum2;
 
+pub mod s045_jump_game;
+
 pub mod s053;
 
 pub mod s058;
