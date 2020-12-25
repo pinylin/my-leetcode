@@ -28,6 +28,7 @@ pub mod s037_sudoku_solver;
 
 pub mod s038;
 pub mod s039_combination_sum;
+pub mod s040_combination_sum2;
 
 pub mod s053;
 

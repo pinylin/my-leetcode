@@ -8,11 +8,13 @@
 impl Solution {
     pub fn combination_sum(mut candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
         candidates.sort_unstable();
-        let mut res = Solution::find_target(&candidates, target);
-        for v in res.iter_mut() {
-            v.sort();
-        }
-        res
+        Solution::find_target(&candidates, target)
+            .into_iter()
+            .map(|mut v| {
+                v.sort();
+                v
+            })
+            .collect()
     }
 
     pub fn find_target(candidates: &[i32], target: i32) -> Vec<Vec<i32>> {
