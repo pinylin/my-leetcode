@@ -7,24 +7,15 @@
 // @lc code=start
 impl Solution {
     pub fn jump(nums: Vec<i32>) -> i32 {
-        let mut step = 0;
-        let mut right = 1;
-        let mut farthest = 0;
-        let mut i = 0;
-
-        while right < nums.len() {
-            farthest = farthest.max(i + nums[i] as usize);
-
-            i += 1;
-
-            if i == right {
-                step += 1;
-
-                right = farthest + 1;
+        let (mut res, mut last, mut cur) = (0, 0, 0);
+        for i in 0..nums.len() {
+            if i > last {
+                last = cur;
+                res += 1;
             }
+            cur = cur.max(i + nums[i] as usize);
         }
-
-        step
+        res
     }
     // reach time limit
     pub fn jump_dfs(nums: Vec<i32>) -> i32 {
