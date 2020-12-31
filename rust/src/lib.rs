@@ -34,6 +34,7 @@ pub mod s045_jump_game;
 
 pub mod s053;
 
+pub mod s057_insert_interval;
 pub mod s058;
 
 pub mod s066;
