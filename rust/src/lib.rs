@@ -201,6 +201,8 @@ pub mod s0561_array_pair_sum;
 
 pub mod s0563_find_tilt;
 
+pub mod s0566_matrix_reshape;
+
 pub mod s1078_bigram;
 
 pub mod s1089_duplicate_zeros;
