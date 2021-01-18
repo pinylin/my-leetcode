@@ -205,6 +205,8 @@ pub mod s566_matrix_reshape;
 
 pub mod s572_is_subtree;
 
+pub mod s575_distribute_candies;
+
 pub mod s1078_bigram;
 
 pub mod s1089_duplicate_zeros;
