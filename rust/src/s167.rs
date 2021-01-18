@@ -33,6 +33,7 @@
  * Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
  *
  */
+// @lc code=start
 impl Solution {
     pub fn two_sum(numbers: Vec<i32>, target: i32) -> Vec<i32> {
         let mut i = 0usize;
@@ -50,6 +51,7 @@ impl Solution {
         return vec![i as i32 + 1, j as i32 + 1];
     }
 }
+// @lc code=end
 
 pub struct Solution;
 

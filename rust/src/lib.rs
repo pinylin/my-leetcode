@@ -197,6 +197,10 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s0561_array_pair_sum;
+
+pub mod s0563_find_tilt;
+
 pub mod s1078_bigram;
 
 pub mod s1089_duplicate_zeros;
