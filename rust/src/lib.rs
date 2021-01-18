@@ -197,6 +197,18 @@ pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;
 
+pub mod s561_array_pair_sum;
+
+pub mod s563_find_tilt;
+
+pub mod s566_matrix_reshape;
+
+pub mod s572_is_subtree;
+
+pub mod s575_distribute_candies;
+
+pub mod s594_find_lhs;
+
 pub mod s1018_prefixes_div_by5;
 
 pub mod s1078_bigram;
