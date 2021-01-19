@@ -8,7 +8,7 @@
 use std::collections::{HashMap, HashSet};
 impl Solution {
     // 方法1 并查集
-    pub fn accounts_merge_ufs(accounts: Vec<Vec<String>>) -> Vec<Vec<String>> {
+    pub fn accounts_merge(accounts: Vec<Vec<String>>) -> Vec<Vec<String>> {
         // init ufs
         let mut ufs = UnionFindSet::new();
         for acc in &accounts {
@@ -142,11 +142,18 @@ mod tests {
 
     #[test]
     fn it_work() {
-        Solution::accounts_merge(vec![
-            vec_string!("John", "johnsmith@mail.com", "john_newyork@mail.com"),
-            vec_string!("John", "johnsmith@mail.com", "john00@mail.com"),
-            vec_string!("Mary", "mary@mail.com"),
-            vec_string!("John", "johnnybravo@mail.com"),
-        ]);
+        assert_eq!(
+            Solution::accounts_merge_dfs(vec![
+                vec_string!("John", "johnsmith@mail.com", "john_newyork@mail.com"),
+                vec_string!("John", "johnsmith@mail.com", "john00@mail.com"),
+                vec_string!("Mary", "mary@mail.com"),
+                vec_string!("John", "johnnybravo@mail.com"),
+            ]),
+            vec![
+                vec_string!("John", "john00@mail.com", "john_newyork@mail.com", "johnsmith@mail.com"),
+                vec_string!("Mary", "mary@mail.com"),
+                vec_string!("John", "johnnybravo@mail.com"),
+            ]
+        );
     }
 }
