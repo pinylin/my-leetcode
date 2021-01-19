@@ -150,7 +150,12 @@ mod tests {
                 vec_string!("John", "johnnybravo@mail.com"),
             ]),
             vec![
-                vec_string!("John", "john00@mail.com", "john_newyork@mail.com", "johnsmith@mail.com"),
+                vec_string!(
+                    "John",
+                    "john00@mail.com",
+                    "john_newyork@mail.com",
+                    "johnsmith@mail.com"
+                ),
                 vec_string!("Mary", "mary@mail.com"),
                 vec_string!("John", "johnnybravo@mail.com"),
             ]
