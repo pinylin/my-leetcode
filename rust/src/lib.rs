@@ -380,6 +380,8 @@ pub mod s1576_modify_string;
 
 pub mod s1582_num_special;
 
+pub mod s1584_min_cost_connect_points;
+
 pub mod s1588_sum_odd_length_subarrays;
 
 pub mod s1592_reorder_spaces;
