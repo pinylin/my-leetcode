@@ -193,6 +193,7 @@ pub mod s530_minimum_difference;
 
 pub mod s532_diff_pairs_in_array;
 
+pub mod s537_complex_number_multiply;
 pub mod s538_convert_bst_greater_tree;
 
 pub mod s541_reverse_string_ii;

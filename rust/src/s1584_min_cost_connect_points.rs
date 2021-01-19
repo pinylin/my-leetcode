@@ -27,7 +27,7 @@ impl Solution {
             let mut a = edge.0;
             let mut b = edge.1;
             while a != parents[a] {
-                a = parents[a]; 
+                a = parents[a];
             }
             while b != parents[b] {
                 b = parents[b];
