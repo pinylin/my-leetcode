@@ -5,10 +5,10 @@
  */
 
 // @lc code=start
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 impl Solution {
     // 方法1 并查集
-    pub fn accounts_merge(accounts: Vec<Vec<String>>) -> Vec<Vec<String>> {
+    pub fn accounts_merge_ufs(accounts: Vec<Vec<String>>) -> Vec<Vec<String>> {
         // init ufs
         let mut ufs = UnionFindSet::new();
         for acc in &accounts {
@@ -38,8 +38,8 @@ impl Solution {
     }
     // 方法2 先建立连通图graph，然后深度优先搜索
     pub fn accounts_merge_dfs(accounts: Vec<Vec<String>>) -> Vec<Vec<String>> {
-        let mut graph = std::collections::HashMap::new();
-        let mut mail2account = std::collections::HashMap::new();
+        let mut graph = HashMap::new();
+        let mut mail2account = HashMap::new();
         for i in 0..accounts.len() {
             let name = &accounts[i][0];
             for j in 1..accounts[i].len() {
@@ -58,8 +58,8 @@ impl Solution {
             }
         }
 
-        let mut visited = std::collections::HashSet::new();
-        let mut answer = Vec::new();
+        let mut visited = HashSet::new();
+        let mut res = Vec::new();
         for i in 0..accounts.len() {
             if accounts[i].len() > 0 && !visited.contains(&accounts[i][1]) {
                 let mut stack = vec![&accounts[i][1]];
@@ -78,11 +78,11 @@ impl Solution {
                 emails.sort_unstable();
                 let mut row = vec![mail2account.get(&accounts[i][1]).unwrap().to_string()];
                 row.append(&mut emails);
-                answer.push(row);
+                res.push(row);
             }
         }
 
-        answer
+        res
     }
 }
 
