@@ -214,6 +214,8 @@ pub mod s721_accounts_merge;
 
 pub mod s1018_prefixes_div_by5;
 
+pub mod s1071_gcd_of_strings;
+
 pub mod s1078_bigram;
 
 pub mod s1089_duplicate_zeros;
