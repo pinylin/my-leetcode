@@ -7,7 +7,7 @@
 // @lc code=start
 impl Solution {
     pub fn gcd_of_strings(str1: String, str2: String) -> String {
-        if [str1.clone(), str2.clone()].concat() != [str2.clone(),  str1.clone()].concat() {
+        if [str1.clone(), str2.clone()].concat() != [str2.clone(), str1.clone()].concat() {
             "".to_string()
         } else {
             str1[..Self::gcd(str1.len(), str2.len())].to_string()
@@ -24,4 +24,4 @@ impl Solution {
 }
 // @lc code=end
 
-pub struct Solution{}
+pub struct Solution {}
