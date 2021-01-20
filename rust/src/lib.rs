@@ -210,6 +210,8 @@ pub mod s575_distribute_candies;
 
 pub mod s594_find_lhs;
 
+pub mod s628_maximum_product;
+
 pub mod s721_accounts_merge;
 
 pub mod s1018_prefixes_div_by5;
