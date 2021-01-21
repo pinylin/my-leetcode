@@ -28,6 +28,9 @@ mod test {
 
     #[test]
     fn it_works() {
-        assert_eq!(Solution::remove_duplicates("abbaca".to_owned()), "ca".to_owned());
+        assert_eq!(
+            Solution::remove_duplicates("abbaca".to_owned()),
+            "ca".to_owned()
+        );
     }
 }

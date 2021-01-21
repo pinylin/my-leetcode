@@ -220,6 +220,7 @@ pub mod s1051_height_checker;
 
 pub mod s1071_gcd_of_strings;
 
+pub mod s1046_last_stone_weight;
 pub mod s1047_remove_duplicates;
 
 pub mod s1078_bigram;
