@@ -286,6 +286,8 @@ pub mod s1313_decompress_rl_elist;
 
 pub mod s1317_get_no_zero_integers;
 
+pub mod s1319_make_connected;
+
 pub mod s1323_maximum69_number;
 
 pub mod s1331_array_rank_transform;
@@ -353,6 +355,8 @@ pub mod s1475_final_prices;
 pub mod s1480_running_sum;
 
 pub mod s1486_xor_operation;
+
+// pub mod s1489_find_critical_and_pseudo_critical_edges;
 
 pub mod s1491_average_salary;
 
